@@ -1,5 +1,5 @@
 package buddyup;
 
-public class aa {
+public class fgfg {
 
 }
