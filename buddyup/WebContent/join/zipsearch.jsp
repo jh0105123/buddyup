@@ -60,8 +60,8 @@ if(dong == null){
 			ZipDto zipDto = list.get(i);
 %>			
 		<div>
-		<a href="javascript:selectzip('<%=zipDto.getZiq1()%>','<%=zipDto.getZiq2()%>','<%=zipDto.getSido()%><%=zipDto.getGugun()%><%=zipDto.getDong()%>');">
-		<%=zipDto.getZiq1()%>-<%=zipDto.getZiq2()%>
+		<a href="javascript:selectzip('<%=zipDto.getZip1()%>','<%=zipDto.getZip2()%>','<%=zipDto.getSido()%><%=zipDto.getGugun()%><%=zipDto.getDong()%>');">
+		<%=zipDto.getZip1()%>-<%=zipDto.getZip2()%>
 		<%=zipDto.getSido()%><%=zipDto.getGugun()%><%=zipDto.getDong()%><%=zipDto.getBunji()%>
 		</a>
 		</div>
