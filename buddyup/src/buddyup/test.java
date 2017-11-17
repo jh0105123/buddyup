@@ -1,5 +1,5 @@
 package buddyup;
 
 public class test {
-	int a = 11;
+	int a = 12;
 }
