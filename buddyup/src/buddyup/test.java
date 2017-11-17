@@ -2,6 +2,6 @@ package buddyup;
 
 public class test {
 public static void main(String[] args) {
-	System.out.println("dfdf");
+	String s = "방배 브런치에서 수정, 다른 파일 지움";
 }
 }
