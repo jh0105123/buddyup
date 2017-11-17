@@ -36,25 +36,25 @@
   </footer>
 
   <!-- Core JavaScript Files -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
-  <script src="js/jquery.sticky.js"></script>
-  <script src="js/slippry.min.js"></script>
-  <script src="js/jquery.flexslider-min.js"></script>
-  <script src="js/morphext.min.js"></script>
-  <script src="js/gmap.js"></script>
-  <script src="js/jquery.mb.YTPlayer.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/jquery.scrollTo.js"></script>
-  <script src="js/jquery.appear.js"></script>
-  <script src="js/stellar.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/nivo-lightbox.min.js"></script>
-  <script src="js/jquery.nicescroll.min.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="contactform/contactform.js"></script>
+  <script src="<%=root %>/resource/js/jquery.min.js"></script>
+  <script src="<%=root %>/resource/js/bootstrap.min.js"></script>
+  <script src="<%=root %>/resource/https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+  <script src="<%=root %>/resource/js/jquery.sticky.js"></script>
+  <script src="<%=root %>/resource/js/slippry.min.js"></script>
+  <script src="<%=root %>/resource/js/jquery.flexslider-min.js"></script>
+  <script src="<%=root %>/resource/js/morphext.min.js"></script>
+  <script src="<%=root %>/resource/js/gmap.js"></script>
+  <script src="<%=root %>/resource/js/jquery.mb.YTPlayer.js"></script>
+  <script src="<%=root %>/resource/js/jquery.easing.min.js"></script>
+  <script src="<%=root %>/resource/js/jquery.scrollTo.js"></script>
+  <script src="<%=root %>/resource/js/jquery.appear.js"></script>
+  <script src="<%=root %>/resource/js/stellar.js"></script>
+  <script src="<%=root %>/resource/js/wow.min.js"></script>
+  <script src="<%=root %>/resource/js/owl.carousel.min.js"></script>
+  <script src="<%=root %>/resource/js/nivo-lightbox.min.js"></script>
+  <script src="<%=root %>/resource/js/jquery.nicescroll.min.js"></script>
+  <script src="<%=root %>/resource/js/custom.js"></script>
+  <script src="<%=root %>/resource/contactform/contactform.js"></script>
 
 </body>
 

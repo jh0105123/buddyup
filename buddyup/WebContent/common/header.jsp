@@ -15,17 +15,49 @@
 
   <title>메인</title>
 
+<!--  
+  <script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/custom.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/gmap.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.appear.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.fitvids.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.mb.YTPlayer.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.scrollTo.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.sticky.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/morphext.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/nivo-lightbox.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/stellar.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/waypoints.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/wow.min.js"></script>
+           
+            
+             
+             -->
+
   <!-- css -->
-  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-  <link href="css/nivo-lightbox.css" rel="stylesheet" />
-  <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
-  <link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
-  <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
-  <link href="css/flexslider.css" rel="stylesheet" />
-  <link href="css/animate.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet">
-  <link href="color/default.css" rel="stylesheet">
+	
+
+  <link href="<%=root %>/resource/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="<%=root %>/resource/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="<%=root %>/resource/css/nivo-lightbox.css" rel="stylesheet" />
+  <link href="<%=root %>/resource/css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+  <link href="<%=root %>/resource/css/owl.carousel.css" rel="stylesheet" media="screen" />
+  <link href="<%=root %>/resource/css/owl.theme.css" rel="stylesheet" media="screen" />
+  <link href="<%=root%>/resource/css/flexslider.css" rel="stylesheet" />
+  <link href="<%=root %>/resource/css/animate.css" rel="stylesheet" />
+  <link href="<%=root %>/resource/css/style.css" rel="stylesheet">
+  <link href="<%=root %>/resource/color/default.css" rel="stylesheet">
+
+	
+
+
+
 
 </head>
 
@@ -67,7 +99,7 @@
             <div class="row">
               <div class="site-logo">
 			  <!--로고 이미지 넣기-->
-                <a href="index.html"><img src="img/logo.png" alt="" /></a>
+                <a href="<%=root %>/index.jsp"><img src="<%=root %>/img/logo.png" alt="" /></a>
               </div>
             </div>
           </div>
@@ -95,7 +127,7 @@
      		 	<%}else{ %>
                   <li><a href="<%=root %>/user?act=mvlogin">Login</a></li> 
                   <li> <a href="<%=root %>/user?act=mvjoin">Joinus</a></li>
-				  <li><a href="#service">Help</a></li>
+				  <li><a href="/ksh/test.jsp">Help</a></li>
                   <li><a href="#works">Community</a></li>
                   <%} %>
                 </ul>
