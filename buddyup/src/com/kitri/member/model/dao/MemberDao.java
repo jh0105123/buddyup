@@ -14,5 +14,4 @@ public interface MemberDao {
 	int registerMember(MemberDetailDto memberDetailDto);
 	
 	MemberDto login(Map<String, String> map);	
-	
 }
