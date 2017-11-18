@@ -1,0 +1,11 @@
+
+
+
+
+
+
+
+
+1. httpSession
+
+2. Cookie
