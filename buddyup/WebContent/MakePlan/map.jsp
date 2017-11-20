@@ -1,13 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="EUC-KR"%>
-	<%
-		String root = request.getContextPath();
-	%>
+<%
+	String root = request.getContextPath();
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <title>Insert title here</title>
 
 <style>
@@ -71,7 +72,8 @@
 	z-index: 1;
 	position: absolute;
 }
-#cancel{
+
+#cancel {
 	font-size: 19px;
 	text-align: center;
 	background-color: rgb(52, 152, 219);
@@ -84,25 +86,22 @@
 
 </head>
 <body>
-	<form name="vv",method="post" action="">
-	<div id="left">
-	<input type="text" placeholder="day">
-	</div>
-	<input id="pac-input" class="controls" type="text" placeholder="Search">
-	<select name="" id="sel" class="controls">
-		<option value="" selected>식당
-		<option value="">시설
-		<option value="">관광
-		<option value="">지하철
-	</select>
 	
-
-
-	<input id="save" type="button" value="저장" onclick="javascript:dd();">
-	<input id="cancel" type="button" value="취소">
-	<div id="map"></div>
-
-	</form>
+		<div id="left">
+			<input type="text" placeholder="day">
+		</div>
+		<input id="pac-input" class="controls" type="text"placeholder="Search"> 
+		<select name="" id="sel"
+			class="controls">
+			<option value="" selected>식당
+			<option value="">시설
+			<option value="">관광
+			<option value="">지하철
+		</select> 
+		<input id="save" type="button" value="저장" onclick="javascript:dd();">
+		<input id="cancel" type="button" value="취소">
+		<div id="map"></div>
+	
 	<script>
 	function dd(){
 		document.vv.action = "<%=root%>/MakePlan/plan.jsp";
@@ -112,14 +111,69 @@
 	<script>
 		function initMap() {
 			var options = {
-				zoom : 8,
+				zoom : 13,
 				center : {
 					lat : 42.36,
 					lng : -71.05
 				}
 			}
-			var map = new google.maps.Map(document.getElementById('map'),
-					options);
+			var map = new google.maps.Map(document.getElementById('map'),options);
+			var input = (document.getElementById('pac-input'));
+			
+			var autocomplete = new google.maps.places.Autocomplete(input);
+	        autocomplete.bindTo('bounds', map);
+			
+	        var infowindow = new google.maps.InfoWindow();
+	        var marker = new google.maps.Marker({
+	          map: map,
+	          anchorPoint: new google.maps.Point(0, -29)
+	        });
+	        
+	        autocomplete.addListener('place_changed', function() {
+	            infowindow.close();
+	            marker.setVisible(false);
+	            var place = autocomplete.getPlace();
+	            if (!place.geometry) {
+	              window.alert("No details available for input: '" + place.name + "'");
+	              return;
+	            }
+			
+	            if (place.geometry.viewport) {
+	                map.fitBounds(place.geometry.viewport);
+	              } else {
+	                map.setCenter(place.geometry.location);
+	                map.setZoom(17);  // Why 17? Because it looks good.
+	              }
+	              marker.setIcon(/** @type {google.maps.Icon} */({
+	                url:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+	                size: new google.maps.Size(71, 71),
+	                origin: new google.maps.Point(0, 0),
+	                anchor: new google.maps.Point(17, 34),
+	                scaledSize: new google.maps.Size(35, 35)
+	              }));
+	              marker.setPosition(place.geometry.location);
+	              marker.setVisible(true);
+	              
+	             var html = "";
+	            html +='<form name="markerinfo" method="post" action="">';
+	            html +='<div style="margin-bottom:5px; height:500px;" align="center">';
+	            html +='	<div><img src ='+place.photos[0].getUrl({maxWidth: 300, maxHeight: 100})+'><h3>'+place.name+'</h3></div><br>';
+	            html +='	<h5>'+place.formatted_address+'</h5><br>';
+	            html +='	<h6>'+place.international_phone_number+'</h6><br>';
+	            html +='	<div><textarea name="" cols="5" rows="5" class="form-control" placeholder="일정메모"></textarea></div><br>';
+	            html +='	<div><input class="form-control" type="text" style="width:300px" placeholder="예상비용"></div><br>';
+	            html +='	<div>';
+	            html +='		<input type="button" class="btn btn-success" value="cencel">';
+	            html +='		<label style="width: 100px"></label>';
+	            html +='		<input type="button"class="btn btn-primary" value="save">';
+	            html +='	</div>';
+	            html +='</div>';
+	            html +='</form>';
+	            infowindow.setContent(html);
+	        	infowindow.open(map,marker);
+	        });
+		}
+		
 			/*
 			//마커추가
 			var marker = new google.maps.Marker({
@@ -134,6 +188,7 @@
 				infowindow.open(map,marker)
 			});
 			 */
+			 /*
 			google.maps.event.addListener(map, 'click', function(event) {
 				addMarker({
 					loc : event.latLng
@@ -177,10 +232,11 @@
 					});
 				}
 			}
-		}
+			*/
+		
 	</script>
 	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjlovEy105yLBFH6Lrg_brtigJc2AJF-s&callback=initMap"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjlovEy105yLBFH6Lrg_brtigJc2AJF-s&libraries=places&callback=initMap"
 		async defer></script>
 </body>
 </html>
