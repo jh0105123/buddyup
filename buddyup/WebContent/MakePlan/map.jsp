@@ -97,7 +97,7 @@
 	</select>
 	
 
-
+     
 	<input id="save" type="button" value="저장" onclick="javascript:dd();">
 	<input id="cancel" type="button" value="취소">
 	<div id="map"></div>
