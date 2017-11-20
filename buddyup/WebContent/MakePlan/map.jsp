@@ -1,92 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-	<%
-		String root = request.getContextPath();
-	%>
+<%
+	String root = request.getContextPath();
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="initial-scale=1.0">
+<link href="css/mapstyle.css" rel="stylesheet">
 <title>Insert title here</title>
-
-<style>
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-#map {
-	width: 76.2%;
-	height: 99%;
-	left: 300px;
-	position: absolute;
-	overflow: hidden;
-}
-
-#left {
-	background: #4d90fe;
-	width: 300px;
-	height: 99%;
-	position: absolute;
-}
-
-.controls {
-	margin-top: 10px;
-	border: 1px solid transparent;
-	border-radius: 2px 0 0 2px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	height: 29px;
-	outline: none;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-#pac-input {
-	background-color: #4d90fe;
-	font-family: Roboto;
-	font-size: 15px;
-	font-weight: 300;
-	margin-left: 12px;
-	padding: 0 11px 0 13px;
-	text-overflow: ellipsis;
-	width: 400px;
-	z-index: 1;
-	position: absolute;
-	left: 400px;
-}
-
-#sel {
-	font-family: Roboto;
-	font-size: 13px;
-	font-weight: 300;
-	position: absolute;
-	z-index: 1;
-	left: 814px;
-}
-
-#save {
-	font-size: 19px;
-	text-align: center;
-	background-color: rgb(52, 152, 219);
-	top: 80%;
-	left: 80%;
-	z-index: 1;
-	position: absolute;
-}
-#cancel{
-	font-size: 19px;
-	text-align: center;
-	background-color: rgb(52, 152, 219);
-	top: 80%;
-	left: 70%;
-	z-index: 1;
-	position: absolute;
-}
-</style>
-
 </head>
 <body>
-	<form name="vv",method="post" action="">
 	<div id="left">
-	<input type="text" placeholder="day">
+		<input type="text" placeholder="day">
 	</div>
 	<input id="pac-input" class="controls" type="text" placeholder="Search">
 	<select name="" id="sel" class="controls">
@@ -95,9 +22,9 @@
 		<option value="">°ü±¤
 		<option value="">ÁöÇÏÃ¶
 	</select>
-	
 
-     
+
+
 	<input id="save" type="button" value="ÀúÀå" onclick="javascript:dd();">
 	<input id="cancel" type="button" value="Ãë¼Ò">
 	<div id="map"></div>
@@ -105,9 +32,10 @@
 	</form>
 	<script>
 	function dd(){
-		document.vv.action = "<%=root%>/MakePlan/plan.jsp";
-		document.vv.submit();
-	}
+		document.vv.action = "<%=root%>
+		/MakePlan/plan.jsp";
+			document.vv.submit();
+		}
 	</script>
 	<script>
 		function initMap() {
