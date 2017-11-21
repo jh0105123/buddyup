@@ -4,17 +4,33 @@ body {
   padding-top: 54px;
   color: #868e96; }
   
-.navTop{
+.navId{
 	color:white;
     font-family:"µ¸¿ò",Dotum,sans-serif;
+
+    padding-left:10px;
+    padding-right:10px;
     position:relative;
-    top:30px
+   
 }  
+
+.heart_eye{
+	color:white;
+	position:relative;
+	padding-left:10px;
+    padding-right:10px;
+}
 
 @media (min-width: 992px) {
   body {
     padding-top: 0;
-    padding-left: 17rem; } }
+    padding-left: 17rem; 
+    } 
+      section.resume-section {
+    min-height: 100vh; }
+    section.resume-section .resume-item .resume-date {
+      min-width: 18rem; } 
+    }
 
 h1,
 h2,
@@ -57,8 +73,7 @@ h2 {
   text-transform: uppercase; }
 
 @media (min-width: 992px) {
-	
-	
+	 
   #sideNav {
     text-align: center;
     position: fixed;
@@ -67,9 +82,52 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 17rem;
-    height: 100vh; }
+    height: 500vh; }    
     
-    
+   #sideNav .title{
+	text-align: center;
+	font-size: 1.5rem;
+	font-family: 'Open Sans', serif;
+	color:white;
+	position: relative;
+	top: 5rem;
+	display: flex;
+	flex-direction: column;
+
+	padding-right:0.5rem;
+	padding-left:0.5rem;
+	padding: 0.5rem 1rem;
+}  
+
+	#sideNav .mapcal{
+	text-align: center;
+	font-size: 1.5rem;
+	font-family: 'Open Sans', serif;
+	color:white;
+
+	display: flex;
+	flex-direction: column;
+
+	padding-right:0.5rem;
+	padding-left:0.5rem;
+	padding: 0.5rem 1rem;
+	}
+	
+	#sideNav .buddyup{
+	text-align: center;
+	font-size: 1rem;
+	font-family: 'Open Sans', serif;
+	color:white;
+	position: relative;
+	top: 32rem;
+	display: flex;
+	flex-direction: column;
+
+	padding-right:0.5rem;
+	padding-left:0.5rem;
+	padding: 0.5rem 1rem;
+	
+    }
     #sideNav .navbar-brand {
       display: flex;
      
@@ -104,67 +162,87 @@ h2 {
       #sideNav .navbar-collapse .navbar-nav {
         flex-direction: column;
         width: 100%; }
-        #sideNav .navbar-collapse .navbar-nav .nav-item {
+        #sideNav .navbar-collapse .navbar-nav .nav-item .mapcal .buddyup{
           display: block; }
-          #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+          #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link .mapcal .buddyup{
             display: block; } }
 
-section.resume-section {
-  border-bottom: 1px solid #dee2e6;
-  padding-top: 5rem !important;
-  padding-bottom: 5rem !important; }
-  section.resume-section .resume-item .resume-date {
-    min-width: none; }
 
-@media (min-width: 768px) {
+@media all and (min-width:0px) and (max-width:992px) {
   section.resume-section {
     min-height: 100vh; }
     section.resume-section .resume-item .resume-date {
-      min-width: 18rem; } }
+      min-width: 18rem; } 
+      
+   	#sideNav .mapcal{
+	
+	font-size: 1rem;
+	font-family: 'Open Sans', serif;
+	color:white;
+
+	display: flex;
+	flex-direction: column;
+
+	}
+	
+	#sideNav .buddyup{
+	text-align: center;
+	font-size: 1rem;
+	font-family: 'Open Sans', serif;
+	color:white;
+	
+    }   
+      
+   #sideNav .title{
+	text-align: center;
+	font-size: 1.5rem;
+	font-family: 'Open Sans', serif;
+	color:white;
+	display: flex;
+	flex-direction: column;
+	padding-right:0.5rem;
+	padding-left:0.5rem;
+	padding: 0.5rem 1rem;
+} 
+     #sideNav .img-like{
+       	max-width: 1rem;
+        max-height: 1rem;
+        font-family: 'Saira Extra Condensed', serif;
+       } 
+       
+    .navTop{
+	color:white;
+    font-family:"µ¸¿ò",Dotum,sans-serif;
+    display: flex;
+}    
+
+      }
 
 @media (min-width: 992px) {
   section.resume-section {
     padding-top: 3rem !important;
-    padding-bottom: 3rem !important; } }
+    padding-bottom: 3rem !important; } 
+
+    }
+    
+    
 
 .bg-primary {
-  background-color: #980000 !important; }
+  background-color: #0080c0!important; }
 
 .text-primary {
-  color: #BD5D38 !important; }
+  color: #004080!important; }
 
 a {
   color: #BD5D38; }
   a:hover, a:focus, a:active {
     color: #824027; }
     
-    
-#title{
-	color:white;
-	font-family: 'Open Sans', serif;
-	font-size: 1.5rem;
-	position: relative;
-	top: 60px;
-	
-}    
-
-#buddyup{
-	
-	position:relative;
-	bottom:80px;
-}
 
 #profile{
-	position:relative;
 	top:35px;
 }
 
-#map-cal{
-	position:relative;
-	bottom:110px;
-	color:white;
-	
-}
 
     
      
