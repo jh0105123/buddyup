@@ -1,13 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
- <%
- String root = request.getContextPath();
- %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <meta charset="EUC-KR"/>
-    <title>회원가입</title>
+<%@ include file="/common/header.jsp" %>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script type="text/javascript">
@@ -39,9 +32,7 @@
 		window.open("<%=root%>/user?act=mvzip","zip","width=500,height=300,top=200,left=200,location=no,status=no,titlebar=no,toolbar=no,resizable=no,scrollbars=yes");
 	}
 	</script>
-</head>
-
-<body>
+	<section id="works" class="home-section color-dark text-center bg-white">
 	<form name="memberform" method="post" action="">
 	<input type ="hidden" id ="act" name="act" value="register">
     <div class="container" align="center">
@@ -116,5 +107,5 @@
         </div>
     </div>
     </form>
-</body>
-</html>
+    </section>
+<%@ include file="/common/footer.jsp" %>

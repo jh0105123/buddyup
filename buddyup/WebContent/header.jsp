@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"  import="com.kitri.member.model.MemberDto,com.kitri.member.model.MemberDetailDto,com.kitri.util.PageMove"%>
-    <% String root = request.getContextPath();
+    pageEncoding="EUC-KR" import="com.kitri.member.model.MemberDto,com.kitri.member.model.MemberDetailDto,com.kitri.util.PageMove"%>
+    <%
+    String root = request.getContextPath();
     MemberDto memberDto = (MemberDto) session.getAttribute("userInfo");
     %>
 <!DOCTYPE html>
@@ -14,8 +15,13 @@
 
   <title>메인</title>
 
+<!--  
+  
+
   <!-- css -->
-    <link href="<%=root %>/res/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	
+
+  <link href="<%=root %>/res/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="<%=root %>/res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
   <link href="<%=root %>/res/css/nivo-lightbox.css" rel="stylesheet" />
   <link href="<%=root %>/res/css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
@@ -25,7 +31,10 @@
   <link href="<%=root %>/res/css/animate.css" rel="stylesheet" />
   <link href="<%=root %>/res/css/style.css" rel="stylesheet">
   <link href="<%=root %>/res/color/default.css" rel="stylesheet">
-  
+
+	
+
+
 
 
 </head>
@@ -60,7 +69,7 @@
   <!-- /page loader -->
 
   <!-- Navigation -->
-  <div id="navigation">
+  <div id="navigation" style="text-align: right; padding-right: 100px;">
     <nav class="navbar navbar-custom" role="navigation">
       <div class="container">
         <div class="row">
@@ -68,7 +77,7 @@
             <div class="row">
               <div class="site-logo">
 			  <!--로고 이미지 넣기-->
-                <a href="index.jsp"><img src="<%=root%>/res/img/logo.png"" alt="" /></a>
+                <a href="<%=root %>/index.jsp"><img src="<%=root %>/res/img/logo.png" alt="" /></a>
               </div>
             </div>
           </div>
@@ -85,8 +94,7 @@
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="menu">
                 <ul class="nav navbar-nav navbar-right">
-                  
-                  <%
+                <%
       				if(memberDto !=null){
      		 	%>
      		 	    <li class="active"><a href="#plan">Plan</a></li> 
@@ -101,6 +109,8 @@
                   <li><a href="#works">Community</a></li>
            	
                   <%} %>
+                  
+                  
                 </ul>
               </div>
               <!-- /.Navbar-collapse -->
@@ -109,6 +119,8 @@
         </div>
       </div>
       <!-- /.container -->
+      
     </nav>
   </div>
+  
   <!-- /Navigation -->

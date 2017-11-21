@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+ <%@ include file="/common/header.jsp" %>
  <%
- String root = request.getContextPath();
+
  Cookie cookie[] = request.getCookies();
  String saveid = "";
  String checkid = "";
@@ -17,13 +18,7 @@
 	 }
  }
  %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<title>로그인</title>
+
 <script type="text/javascript">
 	function login() {
 		
@@ -45,8 +40,7 @@
 	}
 </script>
 
-</head>
-<body>
+	<section id="works" class="home-section color-dark text-center bg-white">
 	<form name="loginform" method="post" action="">
 	<input type="hidden"  id="act" name ="act" value = "login">
 		<div class="container" align="center">
@@ -83,5 +77,5 @@
 			</div>
 		</div>
 	</form>
-</body>
-</html>
+	</section>
+<%@ include file="/common/footer.jsp" %>
