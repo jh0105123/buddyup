@@ -38,9 +38,11 @@ function initMap() {
 	var infowindow = new google.maps.InfoWindow();
 	//마커 생성, 맵에지정, 기준점호출??
 	var marker = new google.maps.Marker({map: map, anchorPoint:new google.maps.Point(0, -29)});
-	//자동완성 리스너  검색어에서 장소를 선택할 경우 기능을 수행     
+	//자동완성 리스너  검색어에서 장소를 선택할 경우 기능을 수행
+	
 	autocomplete.addListener('place_changed', 
 		function() {
+			
 			//선택시 정보창 닫기
 			infowindow.close();
 	   	  	marker.setVisible(false);
@@ -71,6 +73,7 @@ function initMap() {
 	        	anchor: new google.maps.Point(17, 34),
 	            scaledSize: new google.maps.Size(35, 35)
 	        }));
+	    	
 	        marker.setPosition(place.geometry.location);
 	        marker.setVisible(true);
 	        var html = "";
@@ -89,7 +92,11 @@ function initMap() {
 	            html +='	</div>';
 	            html +='</form>';
 	            infowindow.setContent(html);
-	        	infowindow.open(map,marker);
+	         google.maps.event.addListener(marker,'click',function(){
+	        		infowindow.open(map,marker);
+	         });
+	        
+	        
 	    });
 }
 </script>
