@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="buddyup">
+    <wb-module deploy-name="buddyup1">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="buddyup"/>
-        <property name="java-output-path" value="/buddyup/build/classes"/>
+        <property name="java-output-path" value="/buddyup1/build/classes"/>
+        <property name="context-root" value="buddyup1"/>
     </wb-module>
 </project-modules>
