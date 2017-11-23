@@ -56,17 +56,6 @@ h2 {
   font-family: 'Saira Extra Condensed', serif;
   font-size: 1.35rem; }
 
-.list-social-icons a {
-  color: #495057; }
-  .list-social-icons a:hover {
-    color: #BD5D38; }
-  .list-social-icons a .fa-lg {
-    font-size: 1.75rem; }
-
-.list-icons {
-  font-size: 3rem; }
-  .list-icons .list-inline-item i:hover {
-    color: #BD5D38; }
 
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 600;
@@ -99,35 +88,8 @@ h2 {
 	padding: 0.5rem 1rem;
 }  
 
-	#sideNav .mapcal{
-	text-align: center;
-	font-size: 1.5rem;
-	font-family: 'Open Sans', serif;
-	color:white;
-
-	display: flex;
-	flex-direction: column;
-
-	padding-right:0.5rem;
-	padding-left:0.5rem;
-	padding: 0.5rem 1rem;
-	}
 	
-	#sideNav .buddyup{
-	text-align: center;
-	font-size: 1rem;
-	font-family: 'Open Sans', serif;
-	color:white;
-	position: relative;
-	top: 32rem;
-	display: flex;
-	flex-direction: column;
 
-	padding-right:0.5rem;
-	padding-left:0.5rem;
-	padding: 0.5rem 1rem;
-	
-    }
     #sideNav .navbar-brand {
       display: flex;
      
@@ -173,36 +135,11 @@ h2 {
     min-height: 100vh; }
     section.resume-section .resume-item .resume-date {
       min-width: 18rem; } 
-      
-   	#sideNav .mapcal{
-	
-	font-size: 1rem;
-	font-family: 'Open Sans', serif;
-	color:white;
-
-	display: flex;
-	flex-direction: column;
-
-	}
-	
-	#sideNav .buddyup{
-	text-align: center;
-	font-size: 1rem;
-	font-family: 'Open Sans', serif;
-	color:white;
-	
-    }   
-      
+   
    #sideNav .title{
-	text-align: center;
-	font-size: 1.5rem;
-	font-family: 'Open Sans', serif;
+
 	color:white;
-	display: flex;
-	flex-direction: column;
-	padding-right:0.5rem;
-	padding-left:0.5rem;
-	padding: 0.5rem 1rem;
+
 } 
      #sideNav .img-like{
        	max-width: 1rem;
@@ -213,7 +150,6 @@ h2 {
     .navTop{
 	color:white;
     font-family:"µ¸¿ò",Dotum,sans-serif;
-    display: flex;
 }    
 
       }

@@ -45,21 +45,21 @@
       </div>
      </a>
      
-     <sapn class="navId">
+     <span class="navId">
 	      ¾ÆÀÌµð
 	      <a>
 	     <img class="img-like" src="img/plane.png">
 	     </a>
-     </sapn>
+     </span>
 
-       
+
+       <div class="mx-auto">
        <a class="title js-scroll-trigger" href="#about">PLAN-TITLE</a>
-           
+       </div>
+  
 
        
-       <span class="buddyup">
-          <button class="btn default d-flex flex-column flex-md-row mb-1">BUDDYUP!</button>
-       </span> 
+ 
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -85,7 +85,9 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
           </li>
-
+	       <li>
+	          <button class="btn default nav-item">BUDDYUP!</button>
+	       </li>
         </ul>          
       </div>
    
@@ -103,9 +105,11 @@
             <a href="mailto:name@email.com">name@email.com</a>
           </div>
           <p class="mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
-          
+
+		<div class="container" style="padding: 20px; border: 1px solid rgb(204, 204, 204); border-image: none; ">
 		<div class="col-md-6">
          <img src="img/map.JPG" class="thumbnail" alt="Lights" style="width:100%">
+		</div>
 		</div>
 
           
