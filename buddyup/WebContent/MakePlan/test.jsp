@@ -3,7 +3,7 @@
  <% 
  String root = request.getContextPath(); 
  %>
-<%@include file="/common/header.jsp"%>
+
 
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <meta name="viewport" content="initial-scale=1.0">
