@@ -1,16 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en">
-
-  <head>  
-  
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>plan view</title>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<jsp:include page="header.jsp" />
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -23,41 +13,42 @@
     <!-- Custom styles for this template -->
     <link href="css/resume.css" rel="stylesheet">
     
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+      
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <script src="https://use.fontawesome.com/a43d94933d.js"></script>
-  </head>
 
-  <body id="page-top">
-
+  <div id="page-top">
+  	<div class="row">
+		<div class="col-md-2" >
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
           
-      <p class="heart_eye d-none d-lg-block">    
-      <img class="img-like mx-auto mb-2" src="img/full_heart.png"> + 278 &nbsp
-      <img class="img-view mx-auto mb-2" src="img/eye.png">+ 982
+      <div class="mx-auto mb-2" >   
+      <p class="heart_eye  d-lg-block">    
+      <i class="fa fa-heart fa-1x"></i> + 278 &nbsp
+      <i class="fa fa-eye fa-1x"></i>+ 982
       </p>
+      </div>
       
       
           
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <div id="profile">
-        <span class="d-none d-lg-block">
+
+        <span class=" d-lg-block d-none">
           <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
         </span>
-      </div>
+
      </a>
      
      <span class="navId mx-auto">
-	      æ∆¿Ãµ
+	      ÏïÑÏù¥Îîî
 	      <a>
-	     <img class="img-like" src="img/plane.png">
+	     <i class="fa fa-plane fa-1x"></i>
 	     </a>
      </span>
 
 
-       <div class="mx-auto">
+       <div class="mx-auto mb-2">
        <a class="title js-scroll-trigger" href="#about">PLAN-TITLE</a>
        </div>
   
@@ -94,35 +85,36 @@
    
 
     </nav>
+    </div>
 
-    <div class="">
+    <div class="col-md-10"" style="padding:30px;">
 
       <section class="resume-section" id="about">
         <div class="my-auto" id="title">
-          <h1 class="row col-md-12" style="margin-bottom:48px; margin-top:20px;">SUMMARY <span class="text-primary"  style="margin-left:20px;"> MAP&CAL</span></h1>
+          <h1 style="margin-bottom:48px;">SUMMARY <span class="text-primary">MAP&CAL</span></h1>
 
 <!-- small title -->          
           <div class="row col-md-12">
 			<h3 class="korean" style="margin-left:50px; border-bottom:1px solid #f1f3f6;">
 			<i class="fa fa-plane fa-1x"></i>
-			»´ƒ·¿∏∑Œ 2π⁄ 3¿œ GOGO</h3>
-			
+			ÌôçÏΩ©ÏúºÎ°ú 2Î∞ï 3Ïùº GOGO</h3>
           </div>
 			
-<!-- ¡∂»∏ºˆ ¡¡æ∆ø‰ -->
-		<div clas="row">
-			<h3 class="korean" style="margin-top:30px; margin-right:30px; text-align:right;">¡∂»∏ºˆ ¡¡æ∆ø‰</h3>
+<!-- Ï°∞ÌöåÏàò Ï¢ãÏïÑÏöî -->
+		<div clas="row col-md-12">
+			<h3 class="korean" style="margin-top:30px; margin-right:30px; text-align:right;">Ï°∞ÌöåÏàò Ï¢ãÏïÑÏöî</h3>
 		</div>
          
 
-		<div class="row">
-		<div class="col-md-6">
-         <img style="padding: 20px; border: 1px solid rgb(204, 204, 204); border-image: none; width:100% " src="img/map.JPG"  >
-		</div>
-		<div class="col-md-6">
-         <img style="padding: 20px; border: 1px solid rgb(204, 204, 204); border-image: none; width:100%" src="img/map.JPG"  >
-		</div>
-		</div>
+ 		<div class="row"> 
+ 		<div class="col-md-6"> 
+          <img style="padding: 20px; border: 1px solid rgb(204, 204, 204); border-image: none; width:98% " src="img/map.JPG"  > 
+ 		</div> 
+ 		<div class="col-md-6"> 
+          <img style="padding: 20px; border: 1px solid rgb(204, 204, 204); border-image: none; width:98%" src="img/map.JPG"  > 
+ 		</div> 
+ 		</div> 
+
 
 
           
@@ -325,8 +317,9 @@
           </ul>
         </div>
       </section>
-
+	</div>
     </div>
+    
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.js"></script>
@@ -337,7 +330,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/resume.js"></script>
-
-  </body>
+	</div>
+  </div>
 
 </html>

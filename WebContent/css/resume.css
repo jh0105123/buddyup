@@ -2,11 +2,15 @@
 body {
   font-family: 'Open Sans', serif;
   padding-top: 54px;
-  color: #868e96; }
+  color: #868e96; 
+  padding-top: 0;
+  padding-left: 0; }
+  
+
   
 .korean{
 	font-family:"µ¸¿ò",Dotum,sans-serif;	
-}  
+} 
   
 .navId{
 	color:white;
@@ -25,16 +29,11 @@ body {
     padding-right:10px;
 }
 
-@media (min-width: 992px) {
-  body {
-    padding-top: 0;
-    padding-left: 17rem; 
-    } 
       section.resume-section {
     min-height: 100vh; }
     section.resume-section .resume-item .resume-date {
-      min-width: 18rem; } 
-    }
+       } 
+    
 
 h1,
 h2,
@@ -65,18 +64,19 @@ h2 {
   font-weight: 600;
   text-transform: uppercase; }
 
-@media (min-width: 992px) {
+
 	 
   #sideNav {
-  	background-color:lavender;
     text-align: center;
     position: fixed;
-    top: 0;
+    top: 80px;
     left: 0;
-    display: flex;
+    display: block;
     flex-direction: column;
-    width: 17rem;
-    height: 500vh; }    
+    width:200px;
+    height: 100%; 
+    padding:0.5rem;
+    }    
     
    #sideNav .title{
 	text-align: center;
@@ -84,13 +84,12 @@ h2 {
 	font-family: 'Open Sans', serif;
 	color:white;
 	position: relative;
-	top: 5rem;
 	display: flex;
 	flex-direction: column;
 
 	padding-right:0.5rem;
 	padding-left:0.5rem;
-	padding: 0.5rem 1rem;
+
 }  
 
 	
@@ -101,6 +100,7 @@ h2 {
       padding: 0.5rem;
       }
       #sideNav .navbar-brand .img-profile {
+      	display: flex;
         max-width: 10rem;
         max-height: 10rem;
         border: 0.5rem solid rgba(255, 255, 255, 0.2); 
@@ -121,7 +121,7 @@ h2 {
        
     #sideNav .navbar-collapse {
       position: relative;
-      top:80px;
+      
       align-items: flex-start;
       flex-grow: 0;
       width: 100%;
@@ -132,39 +132,14 @@ h2 {
         #sideNav .navbar-collapse .navbar-nav .nav-item .mapcal .buddyup{
           display: block; }
           #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link .mapcal .buddyup{
-            display: block; } }
+            display: block; } 
 
 
-@media all and (min-width:0px) and (max-width:992px) {
+
   section.resume-section {
-    min-height: 100vh; }
-    section.resume-section .resume-item .resume-date {
-      min-width: 18rem; } 
-   
-   #sideNav .title{
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important; } 
 
-	color:white;
-
-} 
-     #sideNav .img-like{
-       	max-width: 1rem;
-        max-height: 1rem;
-        font-family: 'Saira Extra Condensed', serif;
-       } 
-       
-    .navTop{
-	color:white;
-    font-family:"µ¸¿ò",Dotum,sans-serif;
-}    
-
-      }
-
-@media (min-width: 992px) {
-  section.resume-section {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important; } 
-
-    }
     
     
 
@@ -182,6 +157,7 @@ a {
 
 #profile{
 	top:35px;
+	padding:20px;
 }
 
 #title{
