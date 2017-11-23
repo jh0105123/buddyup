@@ -100,14 +100,19 @@
       <section class="resume-section" id="about">
         <div class="my-auto" id="title">
           <h1 style="margin-bottom:48px;">SUMMARY <span class="text-primary">MAP&CAL</span></h1>
-          
+
+<!-- small title -->          
           <div class="row">
-          	
-			<h3 class="mb-5 korean" style="margin-left:50px;">
+			<h3 class="korean" style="margin-left:50px; border-bottom:1px solid #f1f3f6;">
 			<i class="fa fa-plane fa-1x"></i>
 			홍콩으로 2박 3일 GOGO</h3>
+			
           </div>
-
+			
+<!-- 조회수 좋아요 -->
+		<div clas="row">
+			<h3 class="korean" style="margin-top:30px; margin-right:30px; text-align:right;">조회수 좋아요</h3>
+		</div>
          
 
 		<div class="row">
