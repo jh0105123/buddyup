@@ -3,9 +3,8 @@
  <% 
  String root = request.getContextPath(); 
  %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
+<%@include file="/common/header.jsp"%>
+
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <meta name="viewport" content="initial-scale=1.0">
 <meta content="width=device-width">
@@ -156,7 +155,7 @@ function initMap(){
 	         });
 }
 </script>
-</head>
+
 <title>Insert title here</title>
 <body>
  <div class="container-fluid"> 
@@ -201,4 +200,3 @@ function initMap(){
        </div> 
      </div>
 </body>
-</html>
