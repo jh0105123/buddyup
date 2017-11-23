@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
- <% 
- String root = request.getContextPath(); 
- %>
-<%@ jsp:include page = "/common/header.jsp" flush="false"%>
+
+<%@ include file = "/common/header.jsp"%>
 
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <meta name="viewport" content="initial-scale=1.0">

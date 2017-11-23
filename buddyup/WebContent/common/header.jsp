@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
     <% String root = request.getContextPath();
-  
     %>
 <!DOCTYPE html>
 <html lang="EUC-KR">
