@@ -22,8 +22,11 @@
 
     <!-- Custom styles for this template -->
     <link href="css/resume.css" rel="stylesheet">
-
-
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
   </head>
 
   <body id="page-top">
@@ -45,7 +48,7 @@
       </div>
      </a>
      
-     <span class="navId">
+     <span class="navId mx-auto">
 	      ¾ÆÀÌµð
 	      <a>
 	     <img class="img-like" src="img/plane.png">
@@ -57,9 +60,6 @@
        <a class="title js-scroll-trigger" href="#about">PLAN-TITLE</a>
        </div>
   
-
-       
- 
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -94,23 +94,25 @@
 
     </nav>
 
-    <div class="container-fluid p-0">
+    <div class="">
 
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+      <section class="resume-section" id="about">
         <div class="my-auto">
-          <h1 class="mb-0">SUMMARY
+          <h1>SUMMARY
             <span class="text-primary">MAP&CAL</span>
           </h1>
-          <div class="subheading mb-5">3542 Berry Street ¡¤ Cheyenne Wells, CO 80810 ¡¤ (317) 585-8468 ¡¤
-            <a href="mailto:name@email.com">name@email.com</a>
-          </div>
-          <p class="mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
 
-		<div class="container" style="padding: 20px; border: 1px solid rgb(204, 204, 204); border-image: none; ">
+         
+
+		<div class="row">
 		<div class="col-md-6">
-         <img src="img/map.JPG" class="thumbnail" alt="Lights" style="width:100%">
+         <img style="padding: 20px; border: 1px solid rgb(204, 204, 204); border-image: none; width:100% " src="img/map.JPG"  >
+		</div>
+		<div class="col-md-6">
+         <img style="padding: 20px; border: 1px solid rgb(204, 204, 204); border-image: none; width:100%" src="img/map.JPG"  >
 		</div>
 		</div>
+
 
           
           
