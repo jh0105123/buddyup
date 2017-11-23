@@ -26,7 +26,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- 
+ <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <script src="https://use.fontawesome.com/a43d94933d.js"></script>
   </head>
 
   <body id="page-top">
@@ -97,10 +98,15 @@
     <div class="">
 
       <section class="resume-section" id="about">
-        <div class="my-auto">
-          <h1>SUMMARY
-            <span class="text-primary">MAP&CAL</span>
-          </h1>
+        <div class="my-auto" id="title">
+          <h1 style="margin-bottom:48px;">SUMMARY <span class="text-primary">MAP&CAL</span></h1>
+          
+          <div class="row">
+          	
+			<h3 class="mb-5 korean" style="margin-left:50px;">
+			<i class="fa fa-plane fa-1x"></i>
+			È«ÄáÀ¸·Î 2¹Ú 3ÀÏ GOGO</h3>
+          </div>
 
          
 

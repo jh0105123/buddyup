@@ -4,6 +4,10 @@ body {
   padding-top: 54px;
   color: #868e96; }
   
+.korean{
+	font-family:"µ¸¿ò",Dotum,sans-serif;	
+}  
+  
 .navId{
 	color:white;
     font-family:"µ¸¿ò",Dotum,sans-serif;
@@ -64,6 +68,7 @@ h2 {
 @media (min-width: 992px) {
 	 
   #sideNav {
+  	background-color:lavender;
     text-align: center;
     position: fixed;
     top: 0;
@@ -178,6 +183,14 @@ a {
 #profile{
 	top:35px;
 }
+
+#title{
+	margin:15px;
+}
+
+
+
+
 
 
     
