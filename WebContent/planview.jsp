@@ -99,10 +99,10 @@
 
       <section class="resume-section" id="about">
         <div class="my-auto" id="title">
-          <h1 style="margin-bottom:48px;">SUMMARY <span class="text-primary">MAP&CAL</span></h1>
+          <h1 class="row col-md-12" style="margin-bottom:48px; margin-top:20px;">SUMMARY <span class="text-primary"  style="margin-left:20px;"> MAP&CAL</span></h1>
 
 <!-- small title -->          
-          <div class="row">
+          <div class="row col-md-12">
 			<h3 class="korean" style="margin-left:50px; border-bottom:1px solid #f1f3f6;">
 			<i class="fa fa-plane fa-1x"></i>
 			È«ÄáÀ¸·Î 2¹Ú 3ÀÏ GOGO</h3>
