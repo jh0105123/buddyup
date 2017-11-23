@@ -1,31 +1,89 @@
- <%@ page language="java" contentType="text/html; charset=utf-8" 
- 	pageEncoding="EUC-KR"%> 
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
  <% 
  String root = request.getContextPath(); 
- %> 
+ %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
- <html> 
- <head>  
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
- <meta name="viewport" content="initial-scale=1.0"> 
- <meta content="width=device-width"> 
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --> 
- 
- 
- <link href="<%=root%>/css/mapplan.css" rel="stylesheet"> 
- 
- 
- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLinprrX_SNCWBj_mQSXHuwSdp3ejr9us&libraries=places&callback=initMap" async defer></script> 
- 
- 
- 
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta name="viewport" content="initial-scale=1.0">
+<meta content="width=device-width">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLinprrX_SNCWBj_mQSXHuwSdp3ejr9us&libraries=places&callback=initMap" async defer></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"> 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script> 
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> 
 
-<title>일정계획하기</title>
+<style type="text/css">
+ #map { 
+ 	height:100%;
+ 	position: relative; 
+ }
+ /*
+ @media (max-width: 768px) { 
+  #map { 
+     min-height: 100%;
+     position: relative; 
+   } 
+ }  */
+.controls { 
+ 	margin-top: 10px; 
+ 	border: 1px solid transparent; 
+ 	border-radius: 2px 0 0 2px; 
+ 	box-sizing: border-box; 
+ 	-moz-box-sizing: border-box; 
+ 	height: 29px; 
+	outline: none; 
+ 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); 
+ } 
+ #input { 
+ 	background-color: white; 
+ 	font-family: Roboto; 
+ 	font-size: 15px; 
+ 	font-weight: 300; 
+ 	margin-left: 12px; 
+ 	padding: 0 11px 0 13px; 
+ 	text-overflow: ellipsis; 
+ 	width: 400px;
+	z-index:1; 
+	position: absolute; 
+	top:1px;
+	left:100px; 
+ 	
+ }
+ #sel {
+	font-family: Roboto;
+	font-size: 13px;
+	font-weight: 300;
+	position: fixed;
+	z-index:1;
+	top:3px;
+	left: 814px;
+}
+
+#save {
+	font-size: 19px;
+	text-align: center;
+	background-color: rgb(52, 152, 219);
+	top: 80%;
+	left: 80%;
+	z-index:1;
+	position: fixed;
+}
+
+#cancel {
+	font-size: 19px;
+	text-align: center;
+	background-color: rgb(52, 152, 219);
+	top: 80%;
+	left: 70%;
+	z-index:1;
+	position: fixed;
+} 
+</style>
 <script>
+
 function initMap(){
 	//맵 위치 초기화
 	var options = {zoom : 13,center : {lat : 42.36,lng : -71.05}};
@@ -99,18 +157,36 @@ function initMap(){
 }
 </script>
 </head>
+<title>Insert title here</title>
 <body>
-     <div class="container-fluid"> 
+ <div class="container-fluid"> 
        <div class="row"> 
-         <div class="col-md-12"> 
+         <div class="col-md-12" > 
            <div class="row"> 
-             <div class="col-md-3" style="background-color: pink; height: 500px;"> 
-               <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
-                 aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+             <div class="col-md-3" style="background:pink;height: 790px;width:100%;"> 
+               <p class="" style="overflow-y:scroll; width:100%; height:700px;">
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+               nisi ut aliquip ex ea commodo consequat. Duis 
+                 aute irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat n
+                  on proident, sunt in culpa qui officia deserunt mollit anim id est labor
+                  um. sdkjhfsakjfhaskjfhsafjhsadjklfhsdakjfahsdkjflashkjsadhfjklashfkjlsadhfs
+                  kjaldfhaskdjlfhsadkjfhaskjf
+ 				asd
+ 				fs
+ 				fasf
+ 				sdafsadfljsadf
+ 				sdaf
+ 				sad
+ 				fs
+ 				adfsafkljsadlkfjsaklfjsadlkfjsafklsajdf   
+ 				</p>         
              </div> 
              <div class="col-md-9" style="padding: 0;"> 
-                <input id="input" class="controls" type="text"placeholder="Search">
- 				<select name="" id="sel" class="controls"> 
+                <input id="input" class="controls" type="text" placeholder="Search">
+                <select name="" id="sel" class="controls"> 
  					<option value="" selected>식당 
  					<option value="">시설 
  					<option value="">관광 
@@ -118,13 +194,11 @@ function initMap(){
  				</select>  
  				<input id="save" type="button" value="저장"> 
  				<input id="cancel" type="button" value="취소">  
-             <div id="map" style="width: 100%;"></div>
+             	<div id="map"></div>   
              </div> 
            </div> 
          </div> 
        </div> 
      </div>
-      
-
 </body>
 </html>
