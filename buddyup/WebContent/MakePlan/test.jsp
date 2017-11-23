@@ -3,7 +3,7 @@
  <% 
  String root = request.getContextPath(); 
  %>
-<%@ include file="/buddyup1/buddyup/common/header.jsp" %>
+<%@ jsp:include page = "/common/header.jsp" flush="false"%>
 
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <meta name="viewport" content="initial-scale=1.0">
@@ -200,4 +200,4 @@ function initMap(){
        </div> 
      </div>
 </body>
-<%@ include file=/common/footer.jsp" %>
+<%@ jsp:include page = "/common/footer.jsp" flush="false"%>
