@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "ecmaVersion": 5,
   "plugins": {
@@ -12,4 +13,20 @@
     "browser",
     "jquery"
   ]
+=======
+{
+  "ecmaVersion": 5,
+  "plugins": {
+    "guess-types": {
+      
+    },
+    "outline": {
+      
+    }
+  },
+  "libs": [
+    "browser",
+    "jquery"
+  ]
+>>>>>>> refs/remotes/origin/김성한
 }
