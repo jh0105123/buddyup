@@ -14,16 +14,46 @@
     <link href="css/resume.css" rel="stylesheet">
     
       
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <script src="https://use.fontawesome.com/a43d94933d.js"></script>
+  
+  
+    <script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+
+<link href='https://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'>
+  
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/utils/Draggable.min.js'></script>    
+    
 
   <div id="page-top">
+    	<div class="menu-block menu-small" style="position:fixed; left:30px; top:30px; width:50px; height:50px;">
+            <div class="bar">
+                <div class="bar-i bar-1"></div>
+                <div class="bar-i bar-2"></div>
+                <div class="bar-i bar-3"></div>
+            </div>
+            <ul>
+                <div class="menu"><ul><li class="page_item page-item-2 js-scroll-trigger "><a href="#">Home</a></li><li class="page_item page-item-21 current_page_item nav-link js-scroll-trigger "><a href="#Experience">Profile</a></li><li class="page_item page-item-14"><a href="#">Cal&Map</a></li><li class="page_item page-item-33"><a href="#">Plan View</a></li></ul></div>
+            </ul>
+        </div>
+        
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/jquery.gsap.min.js'></script>
+
+    <script  src="js/index.js"></script>
+  
   	<div class="row">
+
 		<div class="col-md-2" >
+		
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-          
-      <div class="mx-auto mb-2" >   
+          <link rel="stylesheet" href="css/style.css">
+    
+    
+       <div class="menu">
+      <div class="mx-auto mb-2 d-lg-block d-none"    >   
       <p class="heart_eye  d-lg-block">    
       <i class="fa fa-heart fa-1x"></i> + 278 &nbsp
       <i class="fa fa-eye fa-1x"></i>+ 982
@@ -35,12 +65,12 @@
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
 
         <span class=" d-lg-block d-none">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2 d-lg-block d-none" src="img/profile.jpg" alt="">
         </span>
 
      </a>
      
-     <span class="navId mx-auto">
+     <span class="navId mx-auto d-lg-block d-none">
 	      아이디
 	      <a>
 	     <i class="fa fa-plane fa-1x"></i>
@@ -48,19 +78,16 @@
      </span>
 
 
-       <div class="mx-auto mb-2">
+       <div class="mx-auto mb-2 d-lg-block d-none">
        <a class="title js-scroll-trigger" href="#about">PLAN-TITLE</a>
        </div>
   
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
  
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link js-scroll-trigger " href="#about">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
@@ -83,11 +110,11 @@
         </ul>          
       </div>
    
-
+	</div>
     </nav>
     </div>
 
-    <div class="col-md-10"" style="padding:30px;">
+    <div class="col-md-10"">
 
       <section class="resume-section" id="about">
         <div class="my-auto" id="title">
@@ -102,7 +129,15 @@
 			
 <!-- 조회수 좋아요 -->
 		<div clas="row col-md-12">
-			<h3 class="korean" style="margin-top:30px; margin-right:30px; text-align:right;">조회수 좋아요</h3>
+			<h3 class="korean" style="margin-top:30px; margin-right:30px; text-align:right;">
+	<p class="heart_eye" style="color:black;">    
+      <i class="fa fa-heart fa-1x"></i> + 88 &nbsp
+      <i class="fa fa-eye fa-1x"></i>+ 135
+      </p>
+			
+			
+			
+			</h3>
 		</div>
          
 
@@ -330,6 +365,9 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/resume.js"></script>
+    
+    
+    
 	</div>
   </div>
 
