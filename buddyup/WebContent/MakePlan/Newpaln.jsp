@@ -2,7 +2,7 @@
     pageEncoding="EUC-KR"%>
 
 <%@ include file ="/common/header.jsp"%>
-<link href="<%=root%>/css/mapplan.css" rel="stylesheet"> 
+<link href="<%=root%>/res/css/mapplan.css" rel="stylesheet"> 
  
   <script>
 function initMap(){
@@ -97,7 +97,7 @@ google.maps.event.addDomListener(window,'load', initMap);
 	<div class="col-md-12">
 		<div class="row">
 			<div class="col-md-2" id="navi" style="padding-right:0px;">
-			 <img src="<%=root%>/img/i.jpg" style="width:100%; height:100%">
+			 <img src="<%=root%>/res/img/i.jpg" style="width:100%; height:100%">
             </div> 
   			<div class="col-md-10" style="padding: 0;">
   				  	<select name="" id="sel" class="controls"> 
