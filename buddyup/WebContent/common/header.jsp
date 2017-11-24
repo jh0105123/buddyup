@@ -91,7 +91,7 @@
   	
   	
   	<!--                   마달 계획짜기                          -->
-			<div class="container">
+			
 				<li class="active"><a data-toggle="modal" href="remote.html" data-target="#plan">plan</a></li>
   				<div class="modal fade" id="plan" role="dialog">
     				<div class="modal-dialog modal-lg">
@@ -109,7 +109,7 @@
       					</div>
     				</div>
   				</div>
-			</div>
+			
      		 	  
      		 	  
 
