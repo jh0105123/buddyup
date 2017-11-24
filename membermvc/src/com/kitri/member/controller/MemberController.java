@@ -82,6 +82,7 @@ public class MemberController extends HttpServlet {
 			String id = request.getParameter("id");
 			String pass = request.getParameter("pass");
 			MemberDto memberDto = memberService.login(id, pass);
+			
 			if(memberDto != null) {
 				/////////////////////////////COOKIE///////////////////////////
 				String idsv = request.getParameter("idsv");
@@ -109,12 +110,21 @@ public class MemberController extends HttpServlet {
 				
 				////////////////////////////session/////////////////////////////
 				HttpSession session = request.getSession();
+<<<<<<< HEAD:membermvc/src/com/kitri/member/controller/MemberController.java
 				session.setAttribute("userinfo", memberDto);
 				///////////////////////////////////////////////////////////////
 //				request.setAttribute("userinfo", memberDto);
 //				PageMove.forward(request, response, "/login/loginok.jsp");
 				PageMove.redirect(request, response, "/login/loginok.jsp");// ¼¼¼ÇÀº Æ÷¿öµå,¸®´ÙÀÌ·ºÆ® »ó°ü¾ø´Ù.
 			}else {
+=======
+				session.setAttribute("userInfo", memberDto);
+				//////////////////////////////////////////////////////////////////////////////
+			//	request.setAttribute("userInfo", memberDto);
+				PageMove.forward(request, response, "/index.jsp");
+			}else {
+				
+>>>>>>> origin/ê¹€ì„±í•œ:buddyup/src/com/kitri/member/controller/MemberController.java
 				PageMove.redirect(request, response, "/login/loginfail.jsp");
 			}
 		}else if("logout".equals(act)) {
