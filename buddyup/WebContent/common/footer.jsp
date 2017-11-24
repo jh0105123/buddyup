@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-    <%
-    String root = request.getContextPath();
-    %>
+  
 <footer>
     <div class="container">
       <div class="row">
@@ -39,26 +37,25 @@
   </footer>
 
   <!-- Core JavaScript Files -->
-  <script src="<%=root %>/res/js/jquery.min.js"></script>
-  <script src="<%=root %>/res/js/bootstrap.min.js"></script>
-  <script src="<%=root %>/res/https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
-  <script src="<%=root %>/res/js/jquery.sticky.js"></script>
-  <script src="<%=root %>/res/js/slippry.min.js"></script>
-  <script src="<%=root %>/res/js/jquery.flexslider-min.js"></script>
-  <script src="<%=root %>/res/js/morphext.min.js"></script>
-  <script src="<%=root %>/res/js/gmap.js"></script>
-  <script src="<%=root %>/res/js/jquery.mb.YTPlayer.js"></script>
-  <script src="<%=root %>/res/js/jquery.easing.min.js"></script>
-  <script src="<%=root %>/res/js/jquery.scrollTo.js"></script>
-  <script src="<%=root %>/res/js/jquery.appear.js"></script>
-  <script src="<%=root %>/res/js/stellar.js"></script>
-  <script src="<%=root %>/res/js/wow.min.js"></script>
-  <script src="<%=root %>/res/js/owl.carousel.min.js"></script>
-  <script src="<%=root %>/res/js/nivo-lightbox.min.js"></script>
-  <script src="<%=root %>/res/js/jquery.nicescroll.min.js"></script>
-  <script src="<%=root %>/res/js/custom.js"></script>
-  <script src="<%=root %>/res/contactform/contactform.js"></script>
+  <script src="<%=request.getContextPath() %>/res/js/jquery.min.js"></script>
+  <script src="<%=request.getContextPath() %>/res/js/bootstrap.min.js"></script>
+  <script src="<%=request.getContextPath() %>/res/https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+  <script src="<%=request.getContextPath() %>/res/js/jquery.sticky.js"></script>
+  <script src="<%=request.getContextPath() %>/res/js/slippry.min.js"></script>
+  <script src="<%=request.getContextPath() %>/res/js/jquery.flexslider-min.js"></script>
+  <script src="<%=request.getContextPath() %>/res/js/morphext.min.js"></script>
+  <script src="<%=request.getContextPath() %>/res/js/gmap.js"></script>
+  <script src="<%=request.getContextPath() %>/res/js/jquery.mb.YTPlayer.js"></script>
+  <script src="<%=request.getContextPath() %>/res/js/jquery.easing.min.js"></script>
+  <script src="<%=request.getContextPath() %>/res/js/jquery.scrollTo.js"></script>
+  <script src="<%=request.getContextPath() %>/res/js/jquery.appear.js"></script>
+  <script src="<%=request.getContextPath() %>/res/js/stellar.js"></script>
+  <script src="<%=request.getContextPath() %>/res/js/wow.min.js"></script>
+  <script src="<%=request.getContextPath() %>/res/js/owl.carousel.min.js"></script>
+  <script src="<%=request.getContextPath() %>/res/js/nivo-lightbox.min.js"></script>
+  <script src="<%=request.getContextPath() %>/res/js/jquery.nicescroll.min.js"></script>
+  <script src="<%=request.getContextPath() %>/res/js/custom.js"></script>
+  <script src="<%=request.getContextPath() %>/res/contactform/contactform.js"></script>
 
 </body>
-
 </html>

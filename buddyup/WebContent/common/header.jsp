@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-    <% String root = request.getContextPath();
-    %>
+    
+    <% 
+    String root = request.getContextPath();
+ %>
 <!DOCTYPE html>
 <html lang="EUC-KR">
 
@@ -14,16 +16,18 @@
   <title>메인</title>
 
   <!-- css -->
-    <link href="<%=root %>/res/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="<%=root %>/res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-  <link href="<%=root %>/res/css/nivo-lightbox.css" rel="stylesheet" />
-  <link href="<%=root %>/res/css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
-  <link href="<%=root %>/res/css/owl.carousel.css" rel="stylesheet" media="screen" />
-  <link href="<%=root %>/res/css/owl.theme.css" rel="stylesheet" media="screen" />
-  <link href="<%=root%>/res/css/flexslider.css" rel="stylesheet" />
-  <link href="<%=root %>/res/css/animate.css" rel="stylesheet" />
-  <link href="<%=root %>/res/css/style.css" rel="stylesheet">
-  <link href="<%=root %>/res/color/default.css" rel="stylesheet">
+  <link href="<%=request.getContextPath() %>/res/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="<%=request.getContextPath() %>/res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="<%=request.getContextPath() %>/res/css/nivo-lightbox.css" rel="stylesheet" />
+  <link href="<%=request.getContextPath() %>/res/css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+  <link href="<%=request.getContextPath() %>/res/css/owl.carousel.css" rel="stylesheet" media="screen" />
+  <link href="<%=request.getContextPath() %>/res/css/owl.theme.css" rel="stylesheet" media="screen" />
+  <link href="<%=request.getContextPath()%>/res/css/flexslider.css" rel="stylesheet" />
+  <link href="<%=request.getContextPath() %>/res/css/animate.css" rel="stylesheet" />
+  <link href="<%=request.getContextPath() %>/res/css/style.css" rel="stylesheet">
+  <link href="<%=request.getContextPath() %>/res/color/default.css" rel="stylesheet">
+  
+
   
 
 
@@ -67,7 +71,7 @@
             <div class="row">
               <div class="site-logo">
 			  <!--로고 이미지 넣기-->
-                <a href="index.jsp"><img src="<%=root%>/res/img/logo.png"" alt="" /></a>
+                <a href="index.jsp"><img src="<%=request.getContextPath()%>/res/img/logo.png"" alt="" /></a>
               </div>
             </div>
           </div>
@@ -84,10 +88,32 @@
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="menu">
                 <ul class="nav navbar-nav navbar-right">
-                  
-            
-     		 	    <li class="active"><a href="#plan">Plan</a></li> 
-                  <li> <a href="#myplan">MyPlan</a></li>
+  	
+  	
+  	<!--                   마달 계획짜기                          -->
+			<div class="container">
+				<li class="active"><a data-toggle="modal" href="remote.html" data-target="#plan">plan</a></li>
+  				<div class="modal fade" id="plan" role="dialog">
+    				<div class="modal-dialog modal-lg">
+      					<div class="modal-content">
+        					<div class="modal-header">
+          						<button type="button" class="close" data-dismiss="modal">&times;</button>
+          						<h4 class="modal-title">Modal Header</h4>
+       						</div>
+        					<div class="modal-body">
+          					<p>This is a large modal.</p>
+        					</div>
+        					<div class="modal-footer">
+          					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        					</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+     		 	  
+     		 	  
+
+                  <li><a href="#myplan">MyPlan</a> </li>
 				  <li><a href="#mypage">MyPage</a></li>
                   <li><a href="">Community</a></li>
                   <li><a href="">Help</a></li>
