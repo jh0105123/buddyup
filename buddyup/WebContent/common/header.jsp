@@ -68,7 +68,7 @@
             <div class="row">
               <div class="site-logo">
 			  <!--로고 이미지 넣기-->
-                <a href="index.jsp"><img src="<%=root%>/res/img/logo.png" alt="" /></a>
+                <a href="<%=root %>/index.jsp"><img src="<%=root%>/res/img/logo.png" alt="" /></a>
               </div>
             </div>
           </div>
