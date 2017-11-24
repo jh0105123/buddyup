@@ -3,6 +3,7 @@
     <% String root = request.getContextPath();
     MemberDto memberDto = (MemberDto) session.getAttribute("userInfo");
     %>
+    
 <!DOCTYPE html>
 <html lang="EUC-KR">
 
@@ -11,7 +12,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
+	<script type="text/javascript">
+	function movemove() {
+		
+		
+		opener.location.href="<%=root%>/MakePlan/Newpaln.jsp"; 
+	
+	
 
+
+	}
+	</script>
   <title>∏ﬁ¿Œ</title>
 
   <!-- css -->
@@ -25,7 +36,7 @@
   <link href="<%=root %>/res/css/animate.css" rel="stylesheet" />
   <link href="<%=root %>/res/css/style.css" rel="stylesheet">
   <link href="<%=root %>/res/color/default.css" rel="stylesheet">
-  
+
 
 
 </head>
@@ -85,11 +96,37 @@
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="menu">
                 <ul class="nav navbar-nav navbar-right">
-                  
+                
                   <%
       				if(memberDto !=null){
      		 	%>
-     		 	    <li class="active"><a href="#plan">Plan</a></li> 
+     		 	     
+          		  
+            <li class="active"><a data-toggle="modal" href="remote.html" data-target="#plan">plan</a></li>
+              <div class="modal fade" id="plan" role="dialog">
+                <div class="modal-dialog modal-lg">
+                     <div class="modal-content">
+                       <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                         </div>
+                       <div class="modal-body">
+                         <p>This is a large modal.</p>
+                       </div>
+                       <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="javascript:movemove()">Close</button> 
+                       
+                       </div>
+                     </div>
+                </div>
+              </div>
+        
+            
+     		 	    
+     		 	    
+     		 	    
+     		 	    
+     		 	    
                   <li> <a href="#myplan">MyPlan</a></li>
 				  <li><a href="#mypage">MyPage</a></li>
                   <li><a href="">Community</a></li>

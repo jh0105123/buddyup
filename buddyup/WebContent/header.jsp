@@ -34,7 +34,9 @@
 
 	
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 
 
 </head>
@@ -97,7 +99,44 @@
                 <%
       				if(memberDto !=null){
      		 	%>
-     		 	    <li class="active"><a href="#plan">Plan</a></li> 
+     			
+     		 	    
+     		 	    
+     		 	    <!-- <li class="active"><a href="#plan">Plan</a></li>  -->
+     		 	    
+     		 	    
+   <div class="container">
+            <li class="active"><a data-toggle="modal" href="remote.html" data-target="#plan">plan</a></li>
+              <div class="modal fade" id="plan" role="dialog">
+                <div class="modal-dialog modal-lg">
+                     <div class="modal-content">
+                       <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                         </div>
+                       <div class="modal-body">
+                         <p>This is a large modal.</p>
+                       </div>
+                       <div class="modal-footer">
+                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                       </div>
+                     </div>
+                </div>
+              </div>
+         </div>
+     		 	    
+     		 	    
+     		 	    
+     		 	    
+     		 	    
+     		 	    
+     		 	    
+     		 	    
+     		 	    
+     		 	    
+     		 	    
+     		 	    
+     		 	    
                   <li> <a href="#myplan">MyPlan</a></li>
 				  <li><a href="#mypage">MyPage</a></li>
                   <li><a href="">Community</a></li>

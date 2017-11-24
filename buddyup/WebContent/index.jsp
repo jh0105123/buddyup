@@ -89,9 +89,5 @@
 	795 Folsom Ave, Suite 600 San Francisco, CA 94107
 	</a>
 
-  <!-- google map -->
-  <section id="map" class="close-map">
-    <div id="google-map"></div>
-  </section>
-  <!-- /google map -->
+
   <%@ include file="/common/footer.jsp" %>

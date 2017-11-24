@@ -316,15 +316,16 @@ body .container12 .content12 .signup-cont {
     				        <div class="signup-cont cont form-inline">
              					   <form name="memberform" class="memberform" action="" method="post" enctype="multipart/form-data">
              					   		<input type="hidden"  id="act" name ="act" value = "register">
+						                   <input type="email" name="name" id="name" class="inpt" required="required" placeholder="이름을 입력하세요">
+						                    <label for="email">Your name</label>
 						                    <input type="text" name="id" id="id" class="inpt" required="required" placeholder="아이디를 입력하세요">
 						                    <label for="name">Your id</label>
-                  							 <input type="email" name="name" id="name" class="inpt" required="required" placeholder="이름을 입력하세요">
-						                    <label for="email">Your name</label>
+                  							 
 						                    <input type="password" name="password" id="password" class="inpt" required="required" placeholder="비밀번호를 입력하세요">
                 						    <label for="password">Your password</label>
                 						    <input type="password" name="passwordok" id="passwordok" class="inpt" required="required" placeholder="비밀번호를 입력하세요">
                 						    <label for="passwordok">Your password</label>
-						                    <input type="text" name="gender" id="gender" class="inpt" required="required" placeholder="생년월일 입력">
+						                    <input type="text" name="gender" id="gender" class="inpt" required="required" placeholder="생년월일 입력 ex)19000101">
                 						    <label for="password">Your password</label>
 						                
                 							 <input id="email1" name="email1" style="width:200px; margin-right:5px; float: left; " type="text" class="inpt" required="required"> @ 

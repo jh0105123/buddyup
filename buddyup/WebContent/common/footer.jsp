@@ -38,7 +38,7 @@
   <!-- Core JavaScript Files -->
   <script src="<%=root %>/res/js/jquery.min.js"></script>
   <script src="<%=root %>/res/js/bootstrap.min.js"></script>
-  <script src="<%=root %>/res/https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+  
   <script src="<%=root %>/res/js/jquery.sticky.js"></script>
   <script src="<%=root %>/res/js/slippry.min.js"></script>
   <script src="<%=root %>/res/js/jquery.flexslider-min.js"></script>
@@ -55,7 +55,9 @@
   <script src="<%=root %>/res/js/jquery.nicescroll.min.js"></script>
   <script src="<%=root %>/res/js/custom.js"></script>
   <script src="<%=root %>/res/contactform/contactform.js"></script>
-
+ 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLinprrX_SNCWBj_mQSXHuwSdp3ejr9us&libraries=places&callback=initMap" async defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script> 
 </body>
 
 </html>
