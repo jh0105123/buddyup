@@ -1,9 +1,9 @@
-.chat-container {
+#chat-container {
 	position: fixed;
 	
 }
 
-.chat-box {   
+#chat-box {   
 	position: absolute;
 	bottom: 20px;
 	right: 75px;
@@ -22,7 +22,7 @@
 	background: #fff;
 }
 
-.chat-btn {
+#chat-btn {
 	position: absolute;
    	bottom: 20px;
    	right: 20px;
@@ -33,7 +33,7 @@
    	display: block;
 }
 
-#ctrl {
+#ctrl-chat-box {
 	cursor: pointer;
    	box-sizing: border-box;
 	height: 38px;
@@ -49,7 +49,7 @@
    	color: #fff;
 }
 
-.badge-noti {
+#badge-noti {
 	position: absolute;
 	top: -9px;
  	right: -9px;
