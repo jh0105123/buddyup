@@ -15,9 +15,9 @@
 	<script type="text/javascript">
 	function movemove() {
 		
-		
-		opener.location.href="<%=root%>/MakePlan/Newpaln.jsp"; 
 	
+		
+	opener.location.href="<%=root%>/MakePlan/Newpaln.jsp";
 	
 
 
@@ -114,7 +114,7 @@
                          <p>This is a large modal.</p>
                        </div>
                        <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="javascript:movemove()">Close</button> 
+                          <button type="button" class="btn btn-default"  id="mv"onclick="javascript:movemove();">Close</button> 
                        
                        </div>
                      </div>
