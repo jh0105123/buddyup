@@ -1,0 +1,71 @@
+.chat-container {
+	position: fixed;
+	
+}
+
+.chat-box {   
+	position: absolute;
+	bottom: 20px;
+	right: 75px;
+	
+	background: black;
+
+    box-sizing: border-box;
+    width: 230px;
+   	height: 320px;
+   	padding: 0px;
+   	margin: 0px;
+   	display: none;
+   		
+	border: 1px solid #e7eaec;
+    border-radius: 4px;
+	background: #fff;
+}
+
+.chat-btn {
+	position: absolute;
+   	bottom: 20px;
+   	right: 20px;
+   		
+   	box-sizing: border-box;
+   	padding: 0px;
+   	margin: 0px;
+   	display: block;
+}
+
+#ctrl {
+	cursor: pointer;
+   	box-sizing: border-box;
+	height: 38px;
+   	width: 38px;
+   	padding: 9px 8px;
+   	margin: 0px;
+   	display: block;
+   	
+   	background: #1ab394;
+    border-radius: 50%;
+   		
+   	text-align: center;
+   	color: #fff;
+}
+
+.badge-noti {
+	position: absolute;
+	top: -9px;
+ 	right: -9px;
+ 		
+ 	background-color: #f8ac59;
+ 	border-radius: 10px;
+
+ 	box-sizing: border-box;
+ 	min-width: 10px;
+ 	padding: 4px;
+ 		
+ 	font-family: Arial;
+ 	font-size: 11px;
+ 	text-shadow: none;
+ 	color: #FFFFFF;
+ 	text-align: center;
+	vertical-align: middle;
+    
+}
