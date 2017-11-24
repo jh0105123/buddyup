@@ -15,12 +15,11 @@
 	<script type="text/javascript">
 	function movemove() {
 		
-		¡¡document.location.href="<%=root%>/MakePlan/Newpaln.jsp"; 
+		document.location.href="<%=root%>/MakePlan/Newpaln.jsp"; 
 
 		
 
 		
-	opener.location.href="<%=root%>/MakePlan/Newpaln.jsp";
 	
 
 
