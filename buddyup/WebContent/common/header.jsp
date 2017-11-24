@@ -68,7 +68,7 @@
             <div class="row">
               <div class="site-logo">
 			  <!--로고 이미지 넣기-->
-                <a href="index.jsp"><img src="<%=root%>/res/img/logo.png"" alt="" /></a>
+                <a href="index.jsp"><img src="<%=root%>/res/img/logo.png" alt="" /></a>
               </div>
             </div>
           </div>
@@ -109,6 +109,15 @@
         </div>
       </div>
       <!-- /.container -->
+      <%
+				if (memberDto != null) {
+			%>
+			<b><%=memberDto.getName()%>(<a
+				href="mailto:<%=memberDto.getEmail1()%>@<%=memberDto.getEmail2()%>"><%=memberDto.getId()%></a>)</b>님
+			안녕하세요. <a href="<%=root%>/user?act=logout">로그아웃</a>
+			<%
+				}
+			%>
     </nav>
   </div>
   <!-- /Navigation -->
