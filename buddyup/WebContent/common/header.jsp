@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-    <%
-    String root = request.getContextPath();
+    <% String root = request.getContextPath();
+
     %>
 <!DOCTYPE html>
 <html lang="EUC-KR">
@@ -14,13 +14,8 @@
 
   <title>메인</title>
 
-<!--  
-  
-
   <!-- css -->
-	
-
-  <link href="<%=root %>/res/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="<%=root %>/res/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="<%=root %>/res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
   <link href="<%=root %>/res/css/nivo-lightbox.css" rel="stylesheet" />
   <link href="<%=root %>/res/css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
@@ -30,10 +25,7 @@
   <link href="<%=root %>/res/css/animate.css" rel="stylesheet" />
   <link href="<%=root %>/res/css/style.css" rel="stylesheet">
   <link href="<%=root %>/res/color/default.css" rel="stylesheet">
-
-	
-
-
+  
 
 
 </head>
@@ -68,7 +60,7 @@
   <!-- /page loader -->
 
   <!-- Navigation -->
-  <div id="navigation" style="text-align: right; padding-right: 100px;">
+  <div id="navigation">
     <nav class="navbar navbar-custom" role="navigation">
       <div class="container">
         <div class="row">
@@ -76,7 +68,7 @@
             <div class="row">
               <div class="site-logo">
 			  <!--로고 이미지 넣기-->
-                <a href="<%=root %>/index.jsp"><img src="<%=root %>/res/img/logo.png" alt="" /></a>
+                <a href="index.jsp"><img src="<%=root%>/res/img/logo.png" alt="" /></a>
               </div>
             </div>
           </div>
@@ -93,12 +85,12 @@
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="menu">
                 <ul class="nav navbar-nav navbar-right">
-     		 	  <li><a href="">Plan</a></li> 
-                  <li> <a href="">MyPlan</a></li>
-				  <li><a href="">MyPage</a></li>
-                  <li><a href="<%=root%>/community/community.jsp">Community</a></li>
-                  <li><a href="">Help</a></li>
-        
+
+                  <li class="active"><a href="<%=root %>/user?act=mvlogin">Login</a></li> 
+                  <li> <a href="<%=root %>/user?act=mvjoin">Joinus</a></li>
+				  <li><a href="/ksh/test.jsp">Help</a></li>
+                  <li><a href="#works">Community</a></li>
+
                 </ul>
               </div>
               <!-- /.Navbar-collapse -->
@@ -106,9 +98,6 @@
           </div>
         </div>
       </div>
-      <!-- /.container -->
-
-      <a href="<%=root%>/user?act=logout">로그아웃</a>
 
     </nav>
   </div>
