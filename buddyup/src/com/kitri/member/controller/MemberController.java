@@ -83,6 +83,7 @@ public class MemberController extends HttpServlet {
 			String id = request.getParameter("id");
 			String pass = request.getParameter("pass");
 			MemberDto memberDto = memberService.login(id, pass);
+			
 			if(memberDto != null) {
 				
 				///////////////////////cookie////////////////////////////////
@@ -116,9 +117,10 @@ public class MemberController extends HttpServlet {
 				session.setAttribute("userInfo", memberDto);
 				//////////////////////////////////////////////////////////////////////////////
 			//	request.setAttribute("userInfo", memberDto);
-				PageMove.redirect(request, response, "/index.jsp");
+				PageMove.forward(request, response, "/index.jsp");
 			}else {
-				PageMove.redirect(request, response, "/index.jsp");
+				
+				PageMove.redirect(request, response, "/login/loginfail.jsp");
 			}
 		} else if("maillist".equals(act)) {
 			PageMove.forward(request, response, "/mail/list.jsp");
