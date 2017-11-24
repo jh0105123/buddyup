@@ -5,13 +5,13 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
-	static{//½ºÅÂÆ½ ºí·Ï. ½ºÅÂÆ½ÀÌ È£ÃâµÉ¶§ ½ÇÇàµÊ. 
+	static{//ï¿½ï¿½ï¿½ï¿½Æ½ ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ È£ï¿½ï¿½É¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½. 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			System.out.println("µå¶óÀÌ¹ö ·Îµù ¼º°ø!!!");
+//			System.out.println("ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ ï¿½Îµï¿½ ï¿½ï¿½ï¿½ï¿½!!!");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
-			System.out.println("µå¶óÀÌ¹ö ·Îµù ½ÇÆÐ");
+//			System.out.println("ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ ï¿½Îµï¿½ ï¿½ï¿½ï¿½ï¿½");
 		}
 	}
 	
