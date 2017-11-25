@@ -12,7 +12,7 @@
 
 </head>
 <body>
-<div style="background-color: #eeeeee; width:100%">
-안녕
+<div style="background-color: #eeeeee; width:100%; height:80px;">
+헤더가 들어갈 자리입니다.
 </div>
 

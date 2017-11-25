@@ -74,8 +74,9 @@ h2 {
     display: block;
     flex-direction: column;
     width:200px;
-    height: 100%; 
-    padding:0.5rem;
+    height: 550px;
+    padding:0px !important;
+    margin-top:80px;
     }    
     
    #sideNav .title{
@@ -180,6 +181,16 @@ a {
 
 } 
 }
+
+tbody{
+	text-align:center;
+}
+
+th{
+	background-color:#1caa6d;
+	color:white;
+}
+
 
 
 
