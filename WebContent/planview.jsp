@@ -25,14 +25,16 @@
 <script src="https://use.fontawesome.com/a43d94933d.js"></script>
 
 
-<script src="https://s.codepen.io/assets/libs/modernizr.js"
-	type="text/javascript"></script>
+<script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
 
-<link href='https://fonts.googleapis.com/css?family=Karla:400,700'
-	rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'>
 
-<script
-	src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/utils/Draggable.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/utils/Draggable.min.js'></script>
+
+<!-- 미니햄버거 -->
+      <link rel="stylesheet" href="css/daysel.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 
 <div id="page-top">
@@ -135,6 +137,8 @@
 
 						</div>
 					</div>
+					
+					<!-- 모달끝 -->
 
 					<div class=" navId d-lg-block d-none" style="position:absolute; top:240px; display:block; width:100%;" > 아이디 <a> <i
 							class="fa fa-plane fa-1x"></i>
@@ -163,10 +167,27 @@
 
 
 					<div class="mx-auto mb-2 d-lg-block d-none" style="position:absolute; top:440px; display:block; width:100%;">
-						<i class="fa fa-arrow-down fa-2x" style="color: white;"
-							aria-hidden="true"></i>
+
 					</div>
 					<div>
+						
+<nav class="menusel mx-auto mb-2 d-lg-block d-none" style="top:430px; left:125px;">
+  <input type="checkbox" href="#" class="menusel-open" name="menusel-open" id="menusel-open" />
+  <label class="menusel-open-button" for="menusel-open">
+    <span class="hamburger hamburger-1"></span>
+    <span class="hamburger hamburger-2"></span>
+    <span class="hamburger hamburger-3"></span>
+  </label>
+  
+  <a href="#" class="menusel-item"> 1 </a>
+  <a href="#" class="menusel-item"> 2 </a>
+  <a href="#" class="menusel-item"> 3 </a>
+  <a href="#" class="menusel-item"> 4 </a>
+  
+  
+</nav>
+	
+						
 						
 						<button class="btn default nav-item" style="position:absolute; top:490px; display:block; width:65%; margin-left:35px; margin-right:35px;">BUDDYUP!</button>
 						
