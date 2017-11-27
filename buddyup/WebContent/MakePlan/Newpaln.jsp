@@ -205,7 +205,8 @@ function initMap(){
   						<button style="background-color: #1db674;border: 4px solid blanchedalmond; width: 100%;" type="button" class="btn btn-success">전체삭제</button>
   					</div>
 				</div> 	
-            </div>     
+            </div>   
+              
   			<div class="col-md-10" style="padding: 0;">			  				
 				<div class="row" style="width:100%; margin:0; z-index:1; position:absolute; padding-left:130px;  padding-top:10px;">
 	  				<div class="col-md-5" style="padding-left:0;">
