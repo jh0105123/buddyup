@@ -2,16 +2,17 @@
     pageEncoding="EUC-KR"%>
 
 <%@ include file ="/common/header.jsp"%>
-<link href="<%=root%>/res/css/mapplan.css" rel="stylesheet"> 
+<link href="<%=root%>/css/mapplan.css" rel="stylesheet"> 
+
  
-  <script>
+ <script>
 function initMap(){
 	//맵 위치 초기화
 	var options = {zoom : 13,center : {lat : 42.36,lng : -71.05}};
 	//맵 호출 및 map 사이즈css
 	var map = new google.maps.Map(document.getElementById('map'),options);
 	//검색 창 input 변수
-	var input =document.getElementById('input');
+	var input =document.getElementById('Plansearch');
 	//자동 검색창에 자동검색 호출
 	var autocomplete = new google.maps.places.Autocomplete(input);
 	autocomplete.bindTo('bounds', map);
@@ -58,58 +59,201 @@ function initMap(){
 	        marker.setVisible(true);
 	        var html = '';
 	            html +='<form name="markerinfo" method="post" action="">';
-	            html +='	<div class="col" style="height:300px; text-overflow: ellipsis;" align="center">';
-	            
-	            html +='		<div style="margin-bottom:5px;">';
-	            html +='			<div><img src ='+place.photos[0].getUrl({maxWidth: 390, maxHeight: 100})+'></div>';
-	            html +='			<div><Strong><p style="font-size:20px">'+place.name+'</p></Strong></div>';
-	            html +='			<div><p style="font-size:15px">'+place.formatted_address+'</p></div>';
-	            html +='			<div><p style="font-size:15px">'+place.international_phone_number+'</p></div>';
-	            html +='		</div>';
-	            
-	            html +='		<div style="margin-bottom:5px;">';
-	            html +='			<div style="margin-bottom:5px; width:300px;">'
-	            html +='			<div style="margin-bottom:5px;"><textarea name="" cols="5" rows="5" class="form-control" placeholder="일정메모"></textarea></div>';
-	            html +='			<div style="margin-bottom:5px;"><input class="form-control" type="text" placeholder="예상비용"></div>';
+	            html +='<div class="row">';
+	            html +='	<div class="col-md-12" style="style="height:300px; text-overflow: ellipsis; overflow: -webkit-paged-x;"" align="center">';
+	            html +='		<div class="row">';
+	            html +='			<div class="col-6 col-sm-3" style="margin-bottom:5px;">';
+	            html +='				<div class="row">';
+	            html +='					<div class="col-md-3"><img src ='+place.photos[0].getUrl({maxWidth: 390, maxHeight: 100})+'></div>';
+	            html +='					<div class="col-md-3"><Strong><p style="font-size:20px">'+place.name+'</p></Strong></div>';
+	            html +='					<div class="col-md-3"><p style="font-size:15px">'+place.formatted_address+'</p></div>';
+	            html +='					<div class="col-md-3"><p style="font-size:15px">'+place.international_phone_number+'</p></div>';
+	            html +='				</div>';
 	            html +='			</div>';
-	            html +='			<div>';
-	            html +='				<input type="button" class="btn btn-success" value="cencel">';
-	            html +='				<label style="width: 100px"></label>';
-	            html +='				<input type="button"class="btn btn-primary" value="save">';
+	            html +='			<div class="col-6 col-sm-3" style="margin-bottom:5px;">';
+	            html +='				<div class="row">';
+	            html +='					<div class="col-md-3" style="margin-bottom:5px; width:300px;">';
+	            html +='					<div class="col-md-3" style="margin-bottom:5px;"><textarea name="" cols="5" rows="5" class="form-control" placeholder="일정메모"></textarea></div>';
+	            html +='					<div class="col-md-3" style="margin-bottom:5px;"><input class="form-control" type="text" placeholder="예상비용"></div>';
+	            html +='					<div class="col-md-3">';
+	            html +='						<input type="button" class="btn btn-success" value="cencel">';
+	            html +='						<label style="width: 100px"></label>';
+	            html +='						<input type="button"class="btn btn-primary" value="save">';
+	            html +='					</div>';
+	            html +='				</div>';
 	            html +='			</div>';
 	            html +='		</div>';
-	            
 	            html +='	</div>';
+	            html +='</div>';	
 	            html +='</form>';
           
 	            infowindow.setContent(html);
-	            google.maps.event.addListener(marker,'click', function(){infowindow.open(map,marker);});
+	            google.maps.event.addListener(marker,'click', 
+	            		function(){
+	            			infowindow.open(map,marker);
+	            			
+	            		}
+	            );
 	         });
 		
+
 }
-google.maps.event.addDomListener(window,'load', initMap);
+google.maps.event.addDomListener(window, 'load', initMap);
 </script>
 
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  var j = jQuery.noConflict();
+  jQuery(function(j) {
+	  j.datepicker.regional['ko'] = {
+			  	closeText : '닫기',
+			    prevText : '이전달',
+			    nextText : '다음달',
+			    currentText : '오늘',
+			    monthNames : ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			    monthNamesShort : ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			    dayNames : ['일', '월', '화', '수', '목', '금', '토'],
+			    dayNamesShort : ['일', '월', '화', '수', '목', '금', '토'],
+			    dayNamesMin : ['일', '월', '화', '수', '목', '금', '토'],
+			    dateFormat: 'yy-mm-dd',
+			    uiLibrary: 'bootstrap4'
+	  };
+	  j.datepicker.setDefaults(j.datepicker.regional['ko']);
+  });
+  
+  j( function() {
+	  j('#mdatepicker1').datepicker({
+		
+		  minDate:0,
+		onSelect: function(selected){
+			j('#mdatepicker2').datepicker("option","minDate","selected")
+		}
+	  });
+	  
+	  j("#mdatepicker2").datepicker({
+		onSelect: function(selected){
+			j('#mdatepicker1').datepicker("option","maxDate","selected")
+		}
+	  });
+	 /*  j('#mdatepicker1').datepicker();
+	  j('#mdatepicker2').datepicker(); */
+  });
+</script>
+<!-- 일정 재설정시 selectbox에 찍히는 기능 -->
+<script type="text/javascript">
+	function daySelect(){
+		
+		var mstart = new Date(j('#mdatepicker1').val());
+		var mend  = new Date(j('#mdatepicker2').val());
+		var dtime = mend.getTime() - mstart.getTime();
+		var daynum = dtime / (1000*60*60*24)+1;
+		if($('#modaltitle').val()==""){
+			 alert("여행 제목을 입력해 주세요");  
+			 return;
+		}else if(j('#mdatepicker1').val()==""){
+			 alert("시작일을 선택해주세요");  
+			 return;
+		}else if(j('#mdatepicker2').val()==""){
+			 alert("종료일을 선택해주세요");  
+			 return;
+		}else{	
+		
+			if(mend-mstart < 0){
+				alert("종료일이 시작일보다 이전일수 없습니다. 날짜를 다시 선택해주세요")
+			}else{
+				$('#selday').empty();
+				
+				for(var i=0; i<daynum; i++){
+					$('#selday').append('<option value="">day'+(i+1)+'</option>');
+				}
+				$('#ModalInPlan').modal('hide');
+			}
+		}
+		
+	}
+	
+	function mcancel(){
+		$('#ModalInPlan').modal('hide');
+	}
+</script>
 
-
-
+<form id="plan" name="plan">
 <div class="row">
 	<div class="col-md-12">
 		<div class="row">
-			<div class="col-md-2" id="navi" style="padding-right:0px;">
-			 <img src="<%=root%>/res/img/i.jpg" style="width:100%; height:100%">
-            </div> 
-  			<div class="col-md-10" style="padding: 0;">
-  				  	<select name="" id="sel" class="controls"> 
- 					<option value="" selected>식당 
- 					<option value="">시설 
- 					<option value="">관광 
- 					<option value="">지하철 
- 					</select>
-  				 <input id="input" class="controls" type="text"placeholder="Search">
-  				<div id="map"></div>
+			<div class="col-md-2" id="navi" style="padding-right:1px;">
+			 	<div class="row" style="padding-top: 10px; padding-left: 10px; margin-left:0px; margin-right:10px;">
+  					<div class="col-md-4" style="margin-left: 0px;margin-bottom: 5px; width: 100%;">
+  						<button style="width: 100%;background-color: #1db674;border: 4px solid blanchedalmond;" type="button" class="btn btn-success">저장</button>
+  					</div>
+  					<div class="col-md-4" style="width: 100%;">
+  						<button style="background-color: #1db674;border: 4px solid blanchedalmond; width: 100%;" type="button" class="btn btn-success">전체삭제</button>
+  					</div>
+				</div> 	
+            </div>     
+  			<div class="col-md-10" style="padding: 0;">			  				
+				<div class="row" style="width:100%; margin:0; z-index:1; position:absolute; padding-left:130px;  padding-top:10px;">
+	  				<div class="col-md-5" style="padding-left:0;">
+	  					<div class="row">
+	  						<div class="col-xs-12" style="padding:0;">
+    							<input style="border: 2px solid blanchedalmond; padding:0;max-width: 75%; margin-left: 15px;" class="form-control" id="Plansearch" type="text" placeholder="Search">
+ 							</div>
+ 						</div>
+	  				</div>
+	  				<div class="col-md-2" style="padding-right:0; padding-left:0;">
+	  					<select id="selloc" name="" class="form-control" style="border: 2px solid blanchedalmond; max-width:80%;	 height:35px;"> 
+ 						<option value="" selected="selected">선택옵션
+ 						<option value="">시설 	
+ 						<option value="">관광 
+ 						<option value="">지하철 
+ 						</select>
+	  				</div>
+	  				<div class="col-md-2" style="padding:0;">	  						
+	  					<select  id="selday" name="" class="form-control" style="border: 2px solid blanchedalmond; max-width:80%; height:35px;">
+	  					
+	  					</select>
+	  				</div>
+	  				<div class="col-md-2" style="padding:0;">
+	  					<button style="border: 2px solid blanchedalmond; min-width:80%; background-color: #1db674;" type="button" class="btn btn-success" data-toggle="modal" data-target="#ModalInPlan">일정선택</button>
+	  				</div>
+				</div>
+				<div id="map">
+  				</div>
   			</div>
   		</div>
 	</div>
 </div>
+
+</form>
+
+<!-- 달력 재설정 -->
+			<form id="planModal" name="planModal">
+ 				<div class="modal fade" id="ModalInPlan" role="dialog">
+					<div class="modal-dialog modal-lg" style="max-width:600px !important; top:30%;">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title" style="text-align:center;">일정 선택</h4>
+							</div>
+							<div class="modal-body">
+								<div class="row" style="width: fit-content; margin: auto;">
+								    <div class="col-md-12" style="padding:0; margin-bottom: 30px;"><input id="modaltitle" class="form-control" id="" type="text" placeholder="여행제목">
+								    </div>
+									<div class="row">
+								    	<div class="col-md-6"><input class="form-control" type="text" id="mdatepicker1" placeholder="시작일"></div>
+								    	<div class="col-md-6"><input class="form-control" type="text" id="mdatepicker2" placeholder="종료일"></div>
+								    </div>
+								</div>		
+							</div>
+							<div class="modal-footer">
+								<input style="background-color: #1db674;" type="button" class="btn btn-success" value="확인" onclick="javascript:daySelect();">
+								<input style="background-color: #1db674;" type="button" class="btn btn-success" value="취소" onclick="javascript:mcancel();">
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
 <%@ include file ="/common/footer.jsp"%>
