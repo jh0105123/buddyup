@@ -57,48 +57,61 @@ function initMap(){
 	    
 	        marker.setPosition(place.geometry.location);
 	        marker.setVisible(true);
+	        
 	        var html = '';
-	            html +='<form name="markerinfo" method="post" action="">';
-	            html +='<div class="row">';
-	            html +='	<div class="col-md-12" style="style="height:300px; text-overflow: ellipsis; overflow: -webkit-paged-x;"" align="center">';
-	            html +='		<div class="row">';
-	            html +='			<div class="col-6 col-sm-3" style="margin-bottom:5px;">';
-	            html +='				<div class="row">';
-	            html +='					<div class="col-md-3"><img src ='+place.photos[0].getUrl({maxWidth: 390, maxHeight: 100})+'></div>';
-	            html +='					<div class="col-md-3"><Strong><p style="font-size:20px">'+place.name+'</p></Strong></div>';
-	            html +='					<div class="col-md-3"><p style="font-size:15px">'+place.formatted_address+'</p></div>';
-	            html +='					<div class="col-md-3"><p style="font-size:15px">'+place.international_phone_number+'</p></div>';
-	            html +='				</div>';
-	            html +='			</div>';
-	            html +='			<div class="col-6 col-sm-3" style="margin-bottom:5px;">';
-	            html +='				<div class="row">';
-	            html +='					<div class="col-md-3" style="margin-bottom:5px; width:300px;">';
-	            html +='					<div class="col-md-3" style="margin-bottom:5px;"><textarea name="" cols="5" rows="5" class="form-control" placeholder="일정메모"></textarea></div>';
-	            html +='					<div class="col-md-3" style="margin-bottom:5px;"><input class="form-control" type="text" placeholder="예상비용"></div>';
-	            html +='					<div class="col-md-3">';
-	            html +='						<input type="button" class="btn btn-success" value="cencel">';
-	            html +='						<label style="width: 100px"></label>';
-	            html +='						<input type="button"class="btn btn-primary" value="save">';
-	            html +='					</div>';
-	            html +='				</div>';
-	            html +='			</div>';
-	            html +='		</div>';
-	            html +='	</div>';
-	            html +='</div>';	
-	            html +='</form>';
+		        html += '		<form class="" method="post">';
+		        html += '			<div class="form-group">';
+		        html += '					<div class="col-sm-12" style="text-align: center; margin-bottom: 6px;">';
+		        html += '						<img src ='+place.photos[0].getUrl({maxWidth: 120, maxHeight: 100})+'>';
+		        html += '					</div>';
+		        html += '			</div>';
+		     	html += '			<div class="form-group" style="text-align: center;">';
+		        html += '					<div class="col-sm-12">';
+		        html += '						<Strong><p style="font-size:15px">'+place.name+'</p></Strong>';
+		        html += '					</div>';
+		      	html += '			</div>';
+		        html += '			<div class="form-group" style="text-align: center;">';
+		        html += '					<div class="col-sm-12">';
+		        html += '						 <p>'+place.formatted_address+'</p>';
+		        html += '					</div>';
+		        html += '			</div>';
+		        html += '			<div class="form-group" style="text-align: center;">';
+		        html += '					<div class="col-sm-12">';
+		        html += '					<p>'+place.international_phone_number+'</p>';
+		        html += '					</div>';
+		        html += '			</div>';
+		        html += '			<div class="form-group" style="text-align: center;">';
+		        html += '					<div class="col-sm-12" style="margin-bottom: 10px;">';
+		        html += '					<textarea class="form-control" rows="4" name="message" placeholder="일정메모"></textarea>';
+		        html += '					</div>';
+		        html += '			</div>';
+		        html += '			<div class="form-group" style="text-align: center;">';
+		        html += '					<div class="col-sm-12" style="margin-bottom: 10px;">';
+		        html += '					<input class="form-control" type="text" placeholder="예상비용">';
+		        html += '					</div>';
+		        html += '			</div>';
+		        html += '			<div class="form-group" style="text-align: center;">';
+		       	html += '				<div class="col-sm-12">';
+		        html += '					<span><input style="margin-right: 66px;" id="submit" name="submit" type="submit" value="Send" class="btn btn-primary"></span>';
+		        html += '					<span><input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary"></span>';
+		        html += '				</div>';
+		        html += '			</div>';
+		        html += '		</form>';
           
 	            infowindow.setContent(html);
 	            google.maps.event.addListener(marker,'click', 
 	            		function(){
 	            			infowindow.open(map,marker);
-	            			
+	            			$("<div>",{
+	            				css: {width:"200px", height:"30px", backgroundColor: "yellow"},
+	            				text: "안녕",
+	            				click: function(){alert('클릭');}
+	            			}).appendTo("navi");
 	            		}
 	            );
 	         });
-		
-
 }
-google.maps.event.addDomListener(window, 'load', initMap);
+/* google.maps.event.addDomListener(window, 'load', initMap); */
 </script>
 
  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -118,8 +131,8 @@ google.maps.event.addDomListener(window, 'load', initMap);
 			    dayNames : ['일', '월', '화', '수', '목', '금', '토'],
 			    dayNamesShort : ['일', '월', '화', '수', '목', '금', '토'],
 			    dayNamesMin : ['일', '월', '화', '수', '목', '금', '토'],
-			    dateFormat: 'yy-mm-dd',
-			    uiLibrary: 'bootstrap4'
+			    dateFormat: 'yy-mm-dd'
+			  
 	  };
 	  j.datepicker.setDefaults(j.datepicker.regional['ko']);
   });
@@ -172,7 +185,6 @@ google.maps.event.addDomListener(window, 'load', initMap);
 				$('#ModalInPlan').modal('hide');
 			}
 		}
-		
 	}
 	
 	function mcancel(){
@@ -181,7 +193,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
 </script>
 
 <form id="plan" name="plan">
-<div class="row">
+<div class="row" style="margin-left: 0px; margin-right: 0px;">
 	<div class="col-md-12">
 		<div class="row">
 			<div class="col-md-2" id="navi" style="padding-right:1px;">
@@ -226,10 +238,9 @@ google.maps.event.addDomListener(window, 'load', initMap);
   		</div>
 	</div>
 </div>
-
 </form>
 
-<!-- 달력 재설정 -->
+<!-- 달력 재설정 모달-->
 			<form id="planModal" name="planModal">
  				<div class="modal fade" id="ModalInPlan" role="dialog">
 					<div class="modal-dialog modal-lg" style="max-width:600px !important; top:30%;">
