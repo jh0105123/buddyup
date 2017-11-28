@@ -102,11 +102,6 @@ function initMap(){
 	            google.maps.event.addListener(marker,'click', 
 	            		function(){
 	            			infowindow.open(map,marker);
-	            			$("<div>",{
-	            				css: {width:"200px", height:"30px", backgroundColor: "yellow"},
-	            				text: "안녕",
-	            				click: function(){alert('클릭');}
-	            			}).appendTo("navi");
 	            		}
 	            );
 	         });
@@ -218,7 +213,7 @@ function initMap(){
 	  				</div>
 	  				<div class="col-md-2" style="padding-right:0; padding-left:0;">
 	  					<select id="selloc" name="" class="form-control" style="border: 2px solid blanchedalmond; max-width:80%;	 height:35px;"> 
- 						<option value="" selected="selected">선택옵션
+ 						<option value="" selected="selected">선택
  						<option value="">시설 	
  						<option value="">관광 
  						<option value="">지하철 
@@ -226,7 +221,7 @@ function initMap(){
 	  				</div>
 	  				<div class="col-md-2" style="padding:0;">	  						
 	  					<select  id="selday" name="" class="form-control" style="border: 2px solid blanchedalmond; max-width:80%; height:35px;">
-	  					
+	  					<option value="" selected="selected">day선택
 	  					</select>
 	  				</div>
 	  				<div class="col-md-2" style="padding:0;">
