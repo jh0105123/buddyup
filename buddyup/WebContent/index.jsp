@@ -28,9 +28,8 @@
 								<button class="btn btn-primary" type="submit">Search</button>
 							  </form>
 							</div>
-
 						</div>
-					  </div>			  
+				</div>			  
             </div>
           </div>
         </div>

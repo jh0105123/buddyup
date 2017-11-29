@@ -21,7 +21,6 @@ function initMap(){
 	//마커 생성, 맵에지정, 기준점호출??
 	var marker = new google.maps.Marker({map: map, anchorPoint:new google.maps.Point(0, -29)});
 	//자동완성 리스너  검색어에서 장소를 선택할 경우 기능을 수행
-	
 	autocomplete.addListener('place_changed', 
 		function() {
 			//선택시 정보창 닫기
@@ -57,7 +56,6 @@ function initMap(){
 	    
 	        marker.setPosition(place.geometry.location);
 	        marker.setVisible(true);
-	        
 	        var html = '';
 		        html += '		<form class="" method="post">';
 		        html += '			<div class="form-group">';
@@ -97,7 +95,6 @@ function initMap(){
 		        html += '				</div>';
 		        html += '			</div>';
 		        html += '		</form>';
-          
 	            infowindow.setContent(html);
 	            google.maps.event.addListener(marker,'click', 
 	            		function(){
@@ -213,7 +210,7 @@ function initMap(){
 	  				</div>
 	  				<div class="col-md-2" style="padding-right:0; padding-left:0;">
 	  					<select id="selloc" name="" class="form-control" style="border: 2px solid blanchedalmond; max-width:80%;	 height:35px;"> 
- 						<option value="" selected="selected">선택
+ 						<option value="" selected="selected">관광 및 시설
  						<option value="">시설 	
  						<option value="">관광 
  						<option value="">지하철 

@@ -13,7 +13,7 @@
 	
 }
 
-@media ( max-width : 768px) {
+@media ( max-width : 983px) {
 	#map {
 		height: 300px;
 		width: 100%;
@@ -24,6 +24,8 @@
 		width: 100%;
 	}
 }
+
+
 
 #save {
 	font-size: 19px;
