@@ -1,0 +1,45 @@
+/*  #container {
+	height:100%;
+} */
+
+#map {
+	height: 724px;
+	width: 100%;
+}
+
+#navi {
+	background-color: #1db674;
+	height: 724px;
+	
+}
+
+@media ( max-width : 983px) {
+	#map {
+		height: 300px;
+		width: 100%;
+	}
+	#navi {
+		background-color: #1db674;
+		height: 100px;
+		width: 100%;
+	}
+}
+
+
+
+#save {
+	font-size: 19px;
+	text-align: center;
+	z-index: 1;
+	position: relative;
+}
+
+#cancel {
+	font-size: 19px;
+	text-align: center;
+	background-color: #1db674;
+	z-index: 1;
+	position: relative;
+}
+
+
