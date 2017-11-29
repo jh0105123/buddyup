@@ -1,191 +1,252 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<jsp:include page="header.jsp" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
+<%@include file="/common/header.jsp"%>
+<!-- search -->
 <link rel="stylesheet" href="css/search.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<!-- ∫Œ∆ÆΩ∫∆Æ∑¶ -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<!-- Î∂ÄÌä∏Ïä§Ìä∏Îû© -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- ≥Ø¬• -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/cal.css">
 
-<title>Insert title here</title>
+<!-- º±≈√π⁄Ω∫ -->
+<link rel="stylesheet" href="css/select.css">
+
+
+<title>∞Àªˆ</title>
 </head>
 <body>
-<div class="row"  style="margin:20px; margin-bottom:30px;">
-  <span class=" col-md-6 wrap"  style="margin-top:15px; ">
-   <span class="search" >
-      <input type="text" class="searchTerm" placeholder="Í≤ÄÏÉâÏñ¥Î•º ÏûÖÎ†•Ìï¥Ï£ºÏÑ∏Ïöî!!"" style="margin-right:10px; margin-left:20px;">
-      <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
-     </button>
-   </span>
-</span>
-<!-- ÏÑ†ÌÉùÎ≤ÑÌäº -->
-<div class="container" >
+<!-- ∞ÀªˆπŸ -->
+<div class="row" style="margin: 20px; margin-bottom: 30px; z-index: -1;">
+	<!-- ∞Àªˆ -->
+		<span class=" col-md-6 wrap" style="margin-top: 15px; height:5rem;"> 
+		<span class="search"> 
+			<input type="text" class="searchTerm" placeholder="∞ÀªˆæÓ∏¶ ¿‘∑¬«ÿ¡÷ººø‰!!" style="margin-right: 10px; margin-left: 20px;">
+				<button type="submit" class="searchButton" style="margin-bottom:10px;">
+					<i class="fa fa-search"></i>
+				</button>
+		</span>
+		</span>
+	<!-- ∞Àªˆ ≥°-->
+		
+<!-- º±≈√πˆ∆∞ -->
+<div class="container">
+	<!-- ≥™¿Ãº±≈√ -->
 
-<!-- ÎÇòÏù¥ÏÑ†ÌÉù -->	
-	<span class="dropdown">
-   <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="margin:15px 10px 15px 10px;">ÎÇòÏù¥
-   <span class="caret"></span></button>
-   <ul class="dropdown-menu" style="margin-top:10px;">
-      <li><a href="#">10ÎåÄ</a></li>
-            <li class="divider"></li>
-      <li><a href="#">20ÎåÄ</a></li>
-            <li class="divider"></li>
-      <li><a href="#">30ÎåÄ</a></li>
-            <li class="divider"></li>
-      <li><a href="#">40ÎåÄ</a></li>            
-      <li class="divider"></li>
-      <li><a href="#">50ÎåÄ</a></li>
-   </ul>
-	</span> 
-	
-<!-- ÏÑ±Î≥Ñ -->	
-	<span class="dropdown">
-   <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="margin:15px 10px 15px 10px;">ÏÑ±Î≥Ñ
-   <span class="caret"></span></button>
-   <ul class="dropdown-menu" style="margin-top:10px;">
-      <li><a href="#">ÎÇ®Ïûê</a></li>
-            <li class="divider"></li>
-      <li><a href="#">Ïó¨Ïûê</a></li>
-            <li class="divider"></li>
-      <li><a href="#">Î¨¥Í¥Ä</a></li>
-   </ul>
+	<span class="select select--white" style="width: 65px; height: 34px; border-radius: 4px; margin: 15px 10px 15px 10px; display: inline-block;">
+  	<span class="placeholder">≥™¿Ã</span>
+	  <ul>
+	    <li>10¥Î</li>
+	    <li>20¥Î</li>
+	    <li>30¥Î</li>
+	    <li>40¥Î</li>
+	    <li>50¥Î</li>
+	    <li>π´∞¸</li>
+	  </ul>
 	</span>
-	
-	
-	
-	
-	<button class="btn btn-default"  style="margin:15px 10px 15px 10px;">ÎÇ†Ïßú</button>	
-	<button class="btn btn-warning" style="margin:15px 10px 15px 10px;">ÏûêÎèôÎß§Ïπ≠</button>	
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" style="margin:15px 10px 15px 10px;">PLAN</button>
+	<!-- ≥™¿Ãº±≈√ ≥°-->	
 
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">ÏùºÏ†ïÏÑ†ÌÉù</h4>
-        </div>
-        
-        <div class="modal-body">
-        <div class="row">
-          		<div class="col-md-4" style="margin: 10px; padding: 10px; border: 1px solid rgb(204, 204, 204);">
-						<img style="border-image: none; width: 100%" src="img/map.JPG">
-								<div style="max-width: none;">Ï†úÏ£ºÎèÑ 2Î∞ï 3Ïùº</div>
-										<div class="  heart_eye  d-lg-block" style="color: black; padding-left: 15px; max-width: none; text-align: left;">
-											<i class="fa fa-heart fa-1x"></i> + 278 &nbsp 
-											<i class="fa fa-eye fa-1x"></i>+ 982
+
+	<!-- º∫∫∞ -->
+	<span class="select select--white" style="width: 65px; height: 34px; border-radius: 4px; margin: 15px 10px 15px 10px; display: inline-block;">
+	  <span class="placeholder">º∫∫∞</span>
+	  <ul>
+	    <li>≥≤</li>
+	    <li>ø©</li>
+	    <li>π´∞¸</li>
+	  </ul>
+	</span>
+	<!-- º∫∫∞ ≥° -->
+	
+	<!-- ¡¶¿Ãƒı∏Æ º±≈√ -->
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript"></script>
+	<script src="js/select.js"></script>
+
+
+
+	<!-- ≥Ø¬• -->
+	<button type="button" class="btn btn-default" data-toggle="modal" data-target="#calModal" style="margin: 15px 10px 15px 10px;">≥Ø¬•</button>
+			<!-- Modal -->
+			<div class="modal fade" id="calModal" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">≥Ø¬•º±≈√</h4>
+						</div>
+
+						<div class="modal-body">
+
+							<div class="container"
+								style="margin-left: 30px; margin-right: 30px; width: auto;">
+								<div id="c row col-md-12">
+									<h3>≥Ø¬•∏¶ º±≈√«ÿ¡÷ººø‰</h3>
+
+
+									<div id="calHelp">
+										<div class="first active">
+											<i>A</i> <b id="sel1text">√‚πﬂ¿œ</b>
 										</div>
-										<div class=" d-lg-block" style="color: black; max-width: none; text-align:right; ">
-											&lt;ÏïÑÏù¥Îîî&gt;</div>
+										<div class="disabled">
+											<i>B</i> <b id="sel2text">µµ¬¯¿œ</b>
+										</div>
+									</div>
+									<div id="disp">
+										<div id="prev" class="nav">&larr;</div>
+										<div id="month">Hello world</div>
+										<div id="next" class="nav">&rarr;</div>
+									</div>
+									<div id="cal"></div>
+									<button type="button" class="btn btn-default"
+										style="margin: 10px; float: center;">»Æ¿Œ</button>
+
+
+								</div>
+								<!-- /#c -->
+							</div>
+							<script
+								src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+							<script src="js/cal.js"></script>
+
+						</div>
+
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default"
+								data-dismiss="modal">Close</button>
+						</div>
+					</div>
 				</div>
-			</div>	
-        </div>
-        
-        
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+			</div>
 
-  <!-- Î™®Îã¨ ÎÅù -->	
+	<!-- ≥Ø¬• ≥° -->
 
-<!-- ÏÑ†ÌÉùÎ≤ÑÌäºÎÅù -->
+
+			<button class="btn btn-warning" style="margin: 15px 10px 15px 10px;">¿⁄µø∏≈ƒ™</button>
+			<!-- Trigger the modal with a button -->
+			<button type="button" class="btn btn-info" data-toggle="modal"
+				data-target="#myModal" style="margin: 15px 10px 15px 10px;">PLAN</button>
+
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">¿œ¡§º±≈√</h4>
+						</div>
+
+						<div class="modal-body">
+							<div class="row">
+								<div class="col-md-4"
+									style="margin: 10px; padding: 10px; border: 1px solid rgb(204, 204, 204);">
+									<img style="border-image: none; width: 100%" src="img/map.JPG">
+									<div style="max-width: none; height: 40px;">¡¶¡÷µµ 2π⁄ 3¿œ</div>
+									<div class="  heart_eye  d-lg-block"
+										style="color: black; padding-left: 15px; max-width: none; text-align: left;">
+										<i class="fa fa-heart fa-1x"></i> + 278 &nbsp; <i class="fa fa-eye fa-1x"></i>+ 982
+									</div>
+									<div class=" d-lg-block" style="color: black; max-width: none; text-align: right;">
+										&lt;æ∆¿Ãµ&gt;</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default"
+								data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ∏¥ﬁ ≥° -->
+
+		</div>
+<!--º±≈√πˆ∆∞ -->
 </div>
-</div>
+<!-- ∞ÀªˆπŸ -->
 
-<div class="row" style="margin-left:20px; margin-right:20px;">
+	<div class="row" style="margin-left: 20px; margin-right: 20px;  min-height: 100vh; overflow-y:hidden">
 
-									<div class=" col-md-2"
-										style="margin: 10px; padding: 10px; border: 1px solid rgb(204, 204, 204);">
-										<img style="border-image: none; width: 100%" src="img/map.JPG">
-										<div class="row col-md-12" style="max-width: none;">Ï†úÏ£ºÎèÑ
-											2Î∞ï 3Ïùº</div>
-										<div class=" row col-md-12 heart_eye  d-lg-block"
-											style="color: black; padding-left: 15px; max-width: none; text-align: left;">
+		<div class=" col-md-2"
+			style="margin: 10px; padding: 10px; border: 1px solid rgb(204, 204, 204);">
+			<img style="border-image: none; width: 100%" src="img/map.JPG">
+			<div class="row col-md-12" style="max-width: none; height: 40px;">
+				¡¶¡÷µµ 2π⁄ 3¿œ</div>
+			<div class=" row col-md-12 heart_eye  d-lg-block"
+				style="color: black; padding-left: 15px; max-width: none; text-align: left;">
 
-											<i class="fa fa-heart fa-1x"></i> + 278 &nbsp 
-											<i class="fa fa-eye fa-1x"></i>+ 982
-										</div>
+				<i class="fa fa-heart fa-1x"></i> + 278 &nbsp; <i class="fa fa-eye fa-1x"></i>+ 982
+			</div>
 
-										<div class=" row col-md-12   d-lg-block"
-											style="color: black; max-width: none; text-align:right; ">
-											&lt;ÏïÑÏù¥Îîî&gt;</div>
-
-
-									</div>
-									
-									
-																		<div class=" col-md-2"
-										style="margin: 10px; padding: 10px; border: 1px solid rgb(204, 204, 204);">
-										<img style="border-image: none; width: 100%" src="img/map.JPG">
-										<div class="row col-md-12" style="max-width: none;">Ï†úÏ£ºÎèÑ
-											2Î∞ï 3Ïùº</div>
-										<div class=" row col-md-12 heart_eye  d-lg-block"
-											style="color: black; padding-left: 15px; max-width: none; text-align: left;">
-
-											<i class="fa fa-heart fa-1x"></i> + 278 &nbsp 
-											<i class="fa fa-eye fa-1x"></i>+ 982
-										</div>
-
-										<div class=" row col-md-12   d-lg-block"
-											style="color: black; max-width: none; text-align:right; ">
-											&lt;ÏïÑÏù¥Îîî&gt;</div>
+			<div class=" row col-md-12   d-lg-block"
+				style="color: black; max-width: none; text-align: right;">
+				&lt;æ∆¿Ãµ&gt;</div>
 
 
-									</div>
-									
-									
-									
-									
-																		<div class=" col-md-2"
-										style="margin: 10px; padding: 10px; border: 1px solid rgb(204, 204, 204);">
-										<img style="border-image: none; width: 100%" src="img/map.JPG">
-										<div class="row col-md-12" style="max-width: none;">Ï†úÏ£ºÎèÑ
-											2Î∞ï 3Ïùº</div>
-										<div class=" row col-md-12 heart_eye  d-lg-block"
-											style="color: black; padding-left: 15px; max-width: none; text-align: left;">
-
-											<i class="fa fa-heart fa-1x"></i> + 278 &nbsp 
-											<i class="fa fa-eye fa-1x"></i>+ 982
-										</div>
-
-										<div class=" row col-md-12   d-lg-block"
-											style="color: black; max-width: none; text-align:right; ">
-											&lt;ÏïÑÏù¥Îîî&gt;</div>
+		</div>
 
 
-									</div>
-									
-									
-									
-									
-																		<div class=" col-md-2"
-										style="margin: 10px; padding: 10px; border: 1px solid rgb(204, 204, 204);">
-										<img style="border-image: none; width: 100%" src="img/map.JPG">
-										<div class="row col-md-12" style="max-width: none;">Ï†úÏ£ºÎèÑ
-											2Î∞ï 3Ïùº</div>
-										<div class=" row col-md-12 heart_eye  d-lg-block"
-											style="color: black; padding-left: 15px; max-width: none; text-align: left;">
+		<div class=" col-md-2"
+			style="margin: 10px; padding: 10px; border: 1px solid rgb(204, 204, 204);">
+			<img style="border-image: none; width: 100%" src="img/map.JPG">
+			<div class="row col-md-12" style="max-width: none; height: 40px;">¡¶¡÷µµ
+				2π⁄ 3¿œ</div>
+			<div class=" row col-md-12 heart_eye  d-lg-block"
+				style="color: black; padding-left: 15px; max-width: none; text-align: left;">
 
-											<i class="fa fa-heart fa-1x"></i> + 278 &nbsp 
-											<i class="fa fa-eye fa-1x"></i>+ 982
-										</div>
+				<i class="fa fa-heart fa-1x"></i> + 278 &nbsp; <i class="fa fa-eye fa-1x"></i>+ 982
+			</div>
 
-										<div class=" row col-md-12   d-lg-block"
-											style="color: black; max-width: none; text-align:right; ">
-											&lt;ÏïÑÏù¥Îîî&gt;</div>
+			<div class=" row col-md-12   d-lg-block"
+				style="color: black; max-width: none; text-align: right;">
+				&lt;æ∆¿Ãµ&gt;</div>
 
 
-									</div>
-									</div>
+		</div>
+		<div class=" col-md-2"
+			style="margin: 10px; padding: 10px; border: 1px solid rgb(204, 204, 204);">
+			<img style="border-image: none; width: 100%" src="img/map.JPG">
+			<div class="row col-md-12" style="max-width: none; height: 40px;">¡¶¡÷µµ
+				2π⁄ 3¿œ</div>
+			<div class=" row col-md-12 heart_eye  d-lg-block"
+				style="color: black; padding-left: 15px; max-width: none; text-align: left;">
 
-</body>
-</html>
+				<i class="fa fa-heart fa-1x"></i> + 278 &nbsp; <i class="fa fa-eye fa-1x"></i>+ 982
+			</div>
+
+			<div class=" row col-md-12   d-lg-block"
+				style="color: black; max-width: none; text-align: right;">
+				&lt;æ∆¿Ãµ&gt;</div>
+
+
+		</div>
+
+		<div class=" col-md-2"
+			style="margin: 10px; padding: 10px; border: 1px solid rgb(204, 204, 204);">
+			<img style="border-image: none; width: 100%" src="img/map.JPG">
+			<div class="row col-md-12" style="max-width: none; height: 40px;">¡¶¡÷µµ
+				2π⁄ 3¿œ</div>
+			<div class=" row col-md-12 heart_eye  d-lg-block"
+				style="color: black; padding-left: 15px; max-width: none; text-align: left;">
+
+				<i class="fa fa-heart fa-1x"></i> + 278 &nbsp; <i class="fa fa-eye fa-1x"></i>+ 982
+			</div>
+
+			<div class=" row col-md-12   d-lg-block"
+				style="color: black; max-width: none; text-align: right;">
+				&lt;æ∆¿Ãµ&gt;</div>
+		</div>
+	</div>
+
+	<%@include file="/common/footer.jsp"%>	

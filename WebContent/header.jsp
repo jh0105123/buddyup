@@ -1,18 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
-    <title>ì¼ì •ë³´ê¸°</title>
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/non-responsive.css" rel="stylesheet" />
-    <link href="css/mystyle.css" rel="stylesheet" />
-   	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+    <meta charset="EUC-KR" />
+    <title>ÀÏÁ¤º¸±â</title>
 
 </head>
 <body>
 <div style="background-color: #eeeeee; width:100%; height:80px;">
-í—¤ë”ê°€ ë“¤ì–´ê°ˆ ìžë¦¬ìž…ë‹ˆë‹¤.
+Çì´õ°¡ µé¾î°¥ ÀÚ¸®ÀÔ´Ï´Ù.
 </div>
 

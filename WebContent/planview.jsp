@@ -1,7 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<jsp:include page="header.jsp" />
+<%@ include file="/header.jsp" %>
 
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/non-responsive.css" rel="stylesheet" />
+    <link href="css/mystyle.css" rel="stylesheet" />
+   	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
 <!-- Bootstrap core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
@@ -100,43 +105,36 @@
 
 
 					<!-- Modal -->
-					<div class="modal fade" id="myModal" role="dialog" style="z-index:0;">
-						<div class="modal-dialog modal-lg" style="index-z: 0;">
-
-							<!-- Modal content-->
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal">&times;</button>
-									<h4 class="modal-title korean">전체 플랜보기</h4>
-								</div>
-								<div class="modal-body">
-									<div class="row col-md-4"
-										style="margin: 10px; padding: 10px; border: 1px solid rgb(204, 204, 204);">
-										<img style="border-image: none; width: 100%" src="img/map.JPG">
-										<div class="row col-md-12" style="max-width: none;">제주도
-											2박 3일</div>
-										<div class=" row col-md-12 heart_eye  d-lg-block"
-											style="color: black; padding-left: 15px; max-width: none; text-align: left;">
-
+			  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title korean">일정선택</h4>
+        </div>
+        
+        <div class="modal-body">
+        <div class="row">
+          		<div class="col-md-4" style="margin: 10px; padding: 10px; border: 1px solid rgb(204, 204, 204);">
+						<img style="border-image: none; width: 100%" src="img/map.JPG">
+								<div style="max-width: none;">제주도 2박 3일</div>
+										<div class="  heart_eye  d-lg-block" style="color: black; padding-left: 15px; max-width: none; text-align: left;">
 											<i class="fa fa-heart fa-1x"></i> + 278 &nbsp 
 											<i class="fa fa-eye fa-1x"></i>+ 982
 										</div>
-
-										<div class=" row col-md-12   d-lg-block"
-											style="color: black; max-width: none; text-align:right; ">
+										<div class=" d-lg-block" style="color: black; max-width: none; text-align:right; ">
 											&lt;아이디&gt;</div>
-
-
-									</div>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-default"
-										data-dismiss="modal">Close</button>
-								</div>
-							</div>
-
-						</div>
-					</div>
+				</div>
+			</div>	
+        </div>
+        
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 					
 					<!-- 모달끝 -->
 
@@ -261,7 +259,7 @@
 
 
 					<div class="row col-md-6 container">
-						<table class="table">
+						<table class="table korean">
 							<thead>
 								<tr>
 									<th colspan="2">DAY1</th>
@@ -401,5 +399,6 @@
 
 		</div>
 	</div>
-
-	</html>
+</div>
+</body>
+</html>
